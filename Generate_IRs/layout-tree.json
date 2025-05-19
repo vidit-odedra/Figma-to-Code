@@ -1,0 +1,2436 @@
+[
+  {
+    "type": "CANVAS",
+    "name": "Page 1",
+    "position": "relative",
+    "children": [
+      {
+        "type": "FRAME",
+        "name": "Главная",
+        "position": "absolute",
+        "left": 0,
+        "top": 0,
+        "width": 1440,
+        "height": 4052,
+        "backgroundcolor": "#ffffff",
+        "children": [
+          {
+            "type": "TEXT",
+            "name": "PROJECT",
+            "text": "PROJECT",
+            "style": {
+              "fontSize": 64,
+              "fontWeight": 300,
+              "fontFamily": "Roboto"
+            },
+            "position": "absolute",
+            "left": 134,
+            "top": 438,
+            "width": 277,
+            "height": 64,
+            "color": "#bdbdbd"
+          },
+          {
+            "type": "TEXT",
+            "name": "Lorum",
+            "text": "Lorum",
+            "style": {
+              "fontSize": 64,
+              "fontWeight": 700,
+              "fontFamily": "Roboto"
+            },
+            "position": "absolute",
+            "left": 135,
+            "top": 502,
+            "width": 186,
+            "height": 64,
+            "color": "#333333"
+          },
+          {
+            "type": "RECTANGLE",
+            "name": "Rectangle 6",
+            "position": "absolute",
+            "left": 535,
+            "top": 105,
+            "width": 770,
+            "height": 829,
+            "backgroundcolor": "#c4c4c4"
+          },
+          {
+            "type": "COMPONENT",
+            "name": "Frame 10",
+            "position": "absolute",
+            "left": 534,
+            "top": 863,
+            "width": 221,
+            "height": 71,
+            "backgroundcolor": "#ffffff",
+            "children": [
+              {
+                "type": "RECTANGLE",
+                "name": "Rectangle 1",
+                "position": "absolute",
+                "left": 534,
+                "top": 863,
+                "width": 222,
+                "height": 71,
+                "backgroundcolor": "#ffffff"
+              },
+              {
+                "type": "GROUP",
+                "name": "Group 83",
+                "position": "absolute",
+                "left": 555,
+                "top": 887,
+                "width": 152,
+                "height": 24,
+                "children": [
+                  {
+                    "type": "TEXT",
+                    "name": "View Project",
+                    "text": "View Project",
+                    "style": {
+                      "fontSize": 12,
+                      "fontWeight": 400,
+                      "fontFamily": "Roboto"
+                    },
+                    "position": "absolute",
+                    "left": 555,
+                    "top": 893,
+                    "width": 110,
+                    "height": 12,
+                    "color": "#333333"
+                  },
+                  {
+                    "type": "INSTANCE",
+                    "name": "arrow-2-right-long",
+                    "position": "absolute",
+                    "left": 683,
+                    "top": 887,
+                    "width": 24,
+                    "height": 24,
+                    "children": [
+                      {
+                        "type": "INSTANCE",
+                        "name": "ico-bg",
+                        "position": "absolute",
+                        "left": 683,
+                        "top": 887,
+                        "width": 23,
+                        "height": 23,
+                        "children": [
+                          {
+                            "type": "RECTANGLE",
+                            "name": "ico-bg",
+                            "position": "absolute",
+                            "left": 683,
+                            "top": 887,
+                            "width": 23,
+                            "height": 23,
+                            "backgroundcolor": "#f4f4f4"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "GROUP",
+                        "name": "ico-shape",
+                        "position": "absolute",
+                        "left": 686,
+                        "top": 894,
+                        "width": 17,
+                        "height": 8,
+                        "children": [
+                          {
+                            "type": "VECTOR",
+                            "name": "Vector (Stroke)",
+                            "position": "absolute",
+                            "left": 686,
+                            "top": 898,
+                            "width": 16,
+                            "height": 1,
+                            "backgroundcolor": "#333333"
+                          },
+                          {
+                            "type": "VECTOR",
+                            "name": "Vector 2 (Stroke)",
+                            "position": "absolute",
+                            "left": 698,
+                            "top": 894,
+                            "width": 4,
+                            "height": 8,
+                            "backgroundcolor": "#333333"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "LINE",
+            "name": "Line 3",
+            "position": "absolute",
+            "left": 264,
+            "top": 682,
+            "width": 271,
+            "height": 0
+          },
+          {
+            "type": "GROUP",
+            "name": "slide-numbers",
+            "position": "absolute",
+            "left": 134,
+            "top": 799,
+            "width": 141,
+            "height": 52,
+            "children": [
+              {
+                "type": "TEXT",
+                "name": "01",
+                "text": "01",
+                "style": {
+                  "fontSize": 24,
+                  "fontWeight": 400,
+                  "fontFamily": "Roboto"
+                },
+                "position": "absolute",
+                "left": 134,
+                "top": 803,
+                "width": 23,
+                "height": 48,
+                "color": "#bdbdbd"
+              },
+              {
+                "type": "TEXT",
+                "name": "02",
+                "text": "02",
+                "style": {
+                  "fontSize": 24,
+                  "fontWeight": 400,
+                  "fontFamily": "Roboto"
+                },
+                "position": "absolute",
+                "left": 247,
+                "top": 803,
+                "width": 28,
+                "height": 24,
+                "color": "#bdbdbd"
+              },
+              {
+                "type": "LINE",
+                "name": "Line 3",
+                "position": "absolute",
+                "left": 184,
+                "top": 799,
+                "width": 30,
+                "height": 31
+              }
+            ]
+          },
+          {
+            "type": "FRAME",
+            "name": "Frame 8",
+            "position": "absolute",
+            "left": 210,
+            "top": 656,
+            "width": 52,
+            "height": 53,
+            "backgroundcolor": "#ffffff",
+            "children": [
+              {
+                "type": "GROUP",
+                "name": "Group 10",
+                "position": "absolute",
+                "left": 210,
+                "top": 656,
+                "width": 53,
+                "height": 53,
+                "children": [
+                  {
+                    "type": "RECTANGLE",
+                    "name": "Rectangle 8",
+                    "position": "absolute",
+                    "left": 210,
+                    "top": 656,
+                    "width": 53,
+                    "height": 53,
+                    "backgroundcolor": "#f9f9f9"
+                  },
+                  {
+                    "type": "FRAME",
+                    "name": "arrow-2-right-long",
+                    "position": "absolute",
+                    "left": 225,
+                    "top": 671,
+                    "width": 24,
+                    "height": 24,
+                    "children": [
+                      {
+                        "type": "FRAME",
+                        "name": "ico-bg",
+                        "position": "absolute",
+                        "left": 225,
+                        "top": 671,
+                        "width": 23,
+                        "height": 23,
+                        "children": [
+                          {
+                            "type": "RECTANGLE",
+                            "name": "ico-bg",
+                            "position": "absolute",
+                            "left": 225,
+                            "top": 671,
+                            "width": 23,
+                            "height": 23,
+                            "backgroundcolor": "#f4f4f4"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "GROUP",
+                        "name": "ico-shape",
+                        "position": "absolute",
+                        "left": 228,
+                        "top": 678,
+                        "width": 17,
+                        "height": 8,
+                        "children": [
+                          {
+                            "type": "VECTOR",
+                            "name": "Vector (Stroke)",
+                            "position": "absolute",
+                            "left": 228,
+                            "top": 682,
+                            "width": 16,
+                            "height": 1,
+                            "backgroundcolor": "#333333"
+                          },
+                          {
+                            "type": "VECTOR",
+                            "name": "Vector 2 (Stroke)",
+                            "position": "absolute",
+                            "left": 241,
+                            "top": 678,
+                            "width": 4,
+                            "height": 8,
+                            "backgroundcolor": "#333333"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "FRAME",
+            "name": "Frame 9",
+            "position": "absolute",
+            "left": 135,
+            "top": 656,
+            "width": 52,
+            "height": 53,
+            "backgroundcolor": "#ffffff",
+            "children": [
+              {
+                "type": "GROUP",
+                "name": "Group 9",
+                "position": "absolute",
+                "left": 135,
+                "top": 656,
+                "width": 53,
+                "height": 53,
+                "children": [
+                  {
+                    "type": "RECTANGLE",
+                    "name": "Rectangle 7",
+                    "position": "absolute",
+                    "left": 135,
+                    "top": 656,
+                    "width": 53,
+                    "height": 53,
+                    "backgroundcolor": "#ffffff"
+                  },
+                  {
+                    "type": "FRAME",
+                    "name": "arrow-2-right-long",
+                    "position": "absolute",
+                    "left": 150,
+                    "top": 671,
+                    "width": 24,
+                    "height": 24,
+                    "children": [
+                      {
+                        "type": "FRAME",
+                        "name": "ico-bg",
+                        "position": "absolute",
+                        "left": 150,
+                        "top": 671,
+                        "width": 23,
+                        "height": 23,
+                        "children": [
+                          {
+                            "type": "RECTANGLE",
+                            "name": "ico-bg",
+                            "position": "absolute",
+                            "left": 150,
+                            "top": 671,
+                            "width": 23,
+                            "height": 23,
+                            "backgroundcolor": "#f4f4f4"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "GROUP",
+                        "name": "ico-shape",
+                        "position": "absolute",
+                        "left": 153,
+                        "top": 678,
+                        "width": 17,
+                        "height": 8,
+                        "children": [
+                          {
+                            "type": "VECTOR",
+                            "name": "Vector (Stroke)",
+                            "position": "absolute",
+                            "left": 154,
+                            "top": 682,
+                            "width": 16,
+                            "height": 1,
+                            "backgroundcolor": "#333333"
+                          },
+                          {
+                            "type": "VECTOR",
+                            "name": "Vector 2 (Stroke)",
+                            "position": "absolute",
+                            "left": 153,
+                            "top": 678,
+                            "width": 4,
+                            "height": 8,
+                            "backgroundcolor": "#333333"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "GROUP",
+            "name": "Group 13",
+            "position": "absolute",
+            "left": 135,
+            "top": 1054,
+            "width": 1170,
+            "height": 465,
+            "children": [
+              {
+                "type": "RECTANGLE",
+                "name": "Rectangle 7",
+                "position": "absolute",
+                "left": 135,
+                "top": 1054,
+                "width": 1170,
+                "height": 435,
+                "backgroundcolor": "#fbfbfb"
+              },
+              {
+                "type": "TEXT",
+                "name": "About",
+                "text": "About",
+                "style": {
+                  "fontSize": 64,
+                  "fontWeight": 300,
+                  "fontFamily": "Roboto"
+                },
+                "position": "absolute",
+                "left": 835,
+                "top": 1084,
+                "width": 168,
+                "height": 64,
+                "color": "#bdbdbd"
+              },
+              {
+                "type": "RECTANGLE",
+                "name": "Rectangle 8",
+                "position": "absolute",
+                "left": 235,
+                "top": 1084,
+                "width": 270,
+                "height": 265,
+                "backgroundcolor": "#c4c4c4"
+              },
+              {
+                "type": "RECTANGLE",
+                "name": "Rectangle 9",
+                "position": "absolute",
+                "left": 535,
+                "top": 1114,
+                "width": 270,
+                "height": 345,
+                "backgroundcolor": "#c4c4c4"
+              },
+              {
+                "type": "RECTANGLE",
+                "name": "Rectangle 10",
+                "position": "absolute",
+                "left": 235,
+                "top": 1379,
+                "width": 270,
+                "height": 140,
+                "backgroundcolor": "#c4c4c4"
+              },
+              {
+                "type": "FRAME",
+                "name": "Frame 11",
+                "position": "absolute",
+                "left": 835,
+                "top": 1388,
+                "width": 222,
+                "height": 71,
+                "backgroundcolor": "#ffffff",
+                "children": [
+                  {
+                    "type": "RECTANGLE",
+                    "name": "Rectangle 1",
+                    "position": "absolute",
+                    "left": 835,
+                    "top": 1388,
+                    "width": 222,
+                    "height": 71,
+                    "backgroundcolor": "#ffffff"
+                  },
+                  {
+                    "type": "GROUP",
+                    "name": "Group 12",
+                    "position": "absolute",
+                    "left": 870,
+                    "top": 1411,
+                    "width": 123,
+                    "height": 24,
+                    "children": [
+                      {
+                        "type": "TEXT",
+                        "name": "Read More",
+                        "text": "Read More",
+                        "style": {
+                          "fontSize": 12,
+                          "fontWeight": 400,
+                          "fontFamily": "Roboto"
+                        },
+                        "position": "absolute",
+                        "left": 870,
+                        "top": 1417,
+                        "width": 86,
+                        "height": 12,
+                        "color": "#333333"
+                      },
+                      {
+                        "type": "INSTANCE",
+                        "name": "arrow-2-right-long",
+                        "position": "absolute",
+                        "left": 969,
+                        "top": 1411,
+                        "width": 24,
+                        "height": 24,
+                        "children": [
+                          {
+                            "type": "INSTANCE",
+                            "name": "ico-bg",
+                            "position": "absolute",
+                            "left": 969,
+                            "top": 1411,
+                            "width": 23,
+                            "height": 23,
+                            "children": [
+                              {
+                                "type": "RECTANGLE",
+                                "name": "ico-bg",
+                                "position": "absolute",
+                                "left": 969,
+                                "top": 1411,
+                                "width": 23,
+                                "height": 23,
+                                "backgroundcolor": "#f4f4f4"
+                              }
+                            ]
+                          },
+                          {
+                            "type": "GROUP",
+                            "name": "ico-shape",
+                            "position": "absolute",
+                            "left": 972,
+                            "top": 1419,
+                            "width": 17,
+                            "height": 8,
+                            "children": [
+                              {
+                                "type": "VECTOR",
+                                "name": "Vector (Stroke)",
+                                "position": "absolute",
+                                "left": 972,
+                                "top": 1422,
+                                "width": 16,
+                                "height": 1,
+                                "backgroundcolor": "#333333"
+                              },
+                              {
+                                "type": "VECTOR",
+                                "name": "Vector 2 (Stroke)",
+                                "position": "absolute",
+                                "left": 984,
+                                "top": 1419,
+                                "width": 4,
+                                "height": 8,
+                                "backgroundcolor": "#333333"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "TEXT",
+                "name": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+                "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+                "style": {
+                  "fontSize": 16,
+                  "fontWeight": 300,
+                  "fontFamily": "Roboto"
+                },
+                "position": "absolute",
+                "left": 835,
+                "top": 1168,
+                "width": 400,
+                "height": 200,
+                "color": "#000000"
+              }
+            ]
+          },
+          {
+            "type": "GROUP",
+            "name": "Group 20",
+            "position": "absolute",
+            "left": 135,
+            "top": 1639,
+            "width": 1170,
+            "height": 268,
+            "children": [
+              {
+                "type": "TEXT",
+                "name": "Main Focus/Mission Statement",
+                "text": "Main Focus/Mission Statement",
+                "style": {
+                  "fontSize": 64,
+                  "fontWeight": 300,
+                  "fontFamily": "Roboto"
+                },
+                "position": "absolute",
+                "left": 135,
+                "top": 1639,
+                "width": 880,
+                "height": 64,
+                "color": "#bdbdbd"
+              },
+              {
+                "type": "GROUP",
+                "name": "Group 16",
+                "position": "absolute",
+                "left": 135,
+                "top": 1763,
+                "width": 413,
+                "height": 144,
+                "children": [
+                  {
+                    "type": "TEXT",
+                    "name": "1",
+                    "text": "1",
+                    "style": {
+                      "fontSize": 200,
+                      "fontWeight": 900,
+                      "fontFamily": "Roboto"
+                    },
+                    "position": "absolute",
+                    "left": 135,
+                    "top": 1765,
+                    "width": 104,
+                    "height": 140,
+                    "color": "#f2f2f2"
+                  },
+                  {
+                    "type": "TEXT",
+                    "name": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed efficitur, lectus et facilisis placerat.",
+                    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed efficitur, lectus et facilisis placerat.",
+                    "style": {
+                      "fontSize": 22,
+                      "fontWeight": 400,
+                      "fontFamily": "Roboto"
+                    },
+                    "position": "absolute",
+                    "left": 269,
+                    "top": 1763,
+                    "width": 279,
+                    "height": 144,
+                    "color": "#333333"
+                  }
+                ]
+              },
+              {
+                "type": "GROUP",
+                "name": "Group 15",
+                "position": "absolute",
+                "left": 735,
+                "top": 1763,
+                "width": 570,
+                "height": 144,
+                "children": [
+                  {
+                    "type": "TEXT",
+                    "name": "2",
+                    "text": "2",
+                    "style": {
+                      "fontSize": 200,
+                      "fontWeight": 900,
+                      "fontFamily": "Roboto"
+                    },
+                    "position": "absolute",
+                    "left": 735,
+                    "top": 1765,
+                    "width": 120,
+                    "height": 140,
+                    "color": "#f2f2f2"
+                  },
+                  {
+                    "type": "TEXT",
+                    "name": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed efficitur, lectus et facilisis placerat, magna mauris porttitor tortor, a auctor est felis ut nisl.",
+                    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed efficitur, lectus et facilisis placerat, magna mauris porttitor tortor, a auctor est felis ut nisl.",
+                    "style": {
+                      "fontSize": 22,
+                      "fontWeight": 400,
+                      "fontFamily": "Roboto"
+                    },
+                    "position": "absolute",
+                    "left": 885,
+                    "top": 1763,
+                    "width": 420,
+                    "height": 144,
+                    "color": "#333333"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "GROUP",
+            "name": "Group 79",
+            "position": "absolute",
+            "left": 135,
+            "top": 2027,
+            "width": 1170,
+            "height": 765,
+            "children": [
+              {
+                "type": "FRAME",
+                "name": "Frame 11",
+                "position": "absolute",
+                "left": 1083,
+                "top": 2721,
+                "width": 221,
+                "height": 71,
+                "backgroundcolor": "#ffffff",
+                "children": [
+                  {
+                    "type": "RECTANGLE",
+                    "name": "Rectangle 1",
+                    "position": "absolute",
+                    "left": 1083,
+                    "top": 2721,
+                    "width": 222,
+                    "height": 71,
+                    "backgroundcolor": "#333333"
+                  },
+                  {
+                    "type": "GROUP",
+                    "name": "Group 18",
+                    "position": "absolute",
+                    "left": 1122,
+                    "top": 2744,
+                    "width": 143,
+                    "height": 24,
+                    "children": [
+                      {
+                        "type": "TEXT",
+                        "name": "All Projects",
+                        "text": "All Projects",
+                        "style": {
+                          "fontSize": 12,
+                          "fontWeight": 400,
+                          "fontFamily": "Roboto"
+                        },
+                        "position": "absolute",
+                        "left": 1122,
+                        "top": 2750,
+                        "width": 109,
+                        "height": 12,
+                        "color": "#ffffff"
+                      },
+                      {
+                        "type": "INSTANCE",
+                        "name": "arrow-2-right-long",
+                        "position": "absolute",
+                        "left": 1241,
+                        "top": 2744,
+                        "width": 24,
+                        "height": 24,
+                        "children": [
+                          {
+                            "type": "INSTANCE",
+                            "name": "ico-bg",
+                            "position": "absolute",
+                            "left": 1241,
+                            "top": 2744,
+                            "width": 23,
+                            "height": 23,
+                            "children": [
+                              {
+                                "type": "RECTANGLE",
+                                "name": "ico-bg",
+                                "position": "absolute",
+                                "left": 1241,
+                                "top": 2744,
+                                "width": 23,
+                                "height": 23,
+                                "backgroundcolor": "#f4f4f4"
+                              }
+                            ]
+                          },
+                          {
+                            "type": "GROUP",
+                            "name": "ico-shape",
+                            "position": "absolute",
+                            "left": 1244,
+                            "top": 2752,
+                            "width": 17,
+                            "height": 8,
+                            "children": [
+                              {
+                                "type": "VECTOR",
+                                "name": "Vector (Stroke)",
+                                "position": "absolute",
+                                "left": 1244,
+                                "top": 2755,
+                                "width": 16,
+                                "height": 1,
+                                "backgroundcolor": "#ffffff"
+                              },
+                              {
+                                "type": "VECTOR",
+                                "name": "Vector 2 (Stroke)",
+                                "position": "absolute",
+                                "left": 1256,
+                                "top": 2752,
+                                "width": 4,
+                                "height": 8,
+                                "backgroundcolor": "#ffffff"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "TEXT",
+                "name": "Our Projects",
+                "text": "Our Projects",
+                "style": {
+                  "fontSize": 64,
+                  "fontWeight": 300,
+                  "fontFamily": "Roboto"
+                },
+                "position": "absolute",
+                "left": 135,
+                "top": 2027,
+                "width": 346,
+                "height": 64,
+                "color": "#bdbdbd"
+              },
+              {
+                "type": "RECTANGLE",
+                "name": "Rectangle 12",
+                "position": "absolute",
+                "left": 135,
+                "top": 2151,
+                "width": 570,
+                "height": 255,
+                "backgroundcolor": "#c4c4c4"
+              },
+              {
+                "type": "RECTANGLE",
+                "name": "Rectangle 17",
+                "position": "absolute",
+                "left": 135,
+                "top": 2151,
+                "width": 570,
+                "height": 255,
+                "backgroundcolor": "#333333"
+              },
+              {
+                "type": "GROUP",
+                "name": "Group 17",
+                "position": "absolute",
+                "left": 214,
+                "top": 2199,
+                "width": 233,
+                "height": 160,
+                "children": [
+                  {
+                    "type": "GROUP",
+                    "name": "Group 91",
+                    "position": "absolute",
+                    "left": 214,
+                    "top": 2199,
+                    "width": 233,
+                    "height": 160,
+                    "children": [
+                      {
+                        "type": "GROUP",
+                        "name": "Group 12",
+                        "position": "absolute",
+                        "left": 214,
+                        "top": 2335,
+                        "width": 129,
+                        "height": 24,
+                        "children": [
+                          {
+                            "type": "TEXT",
+                            "name": "View More",
+                            "text": "View More",
+                            "style": {
+                              "fontSize": 12,
+                              "fontWeight": 400,
+                              "fontFamily": "Gothic A1"
+                            },
+                            "position": "absolute",
+                            "left": 214,
+                            "top": 2341,
+                            "width": 85,
+                            "height": 12,
+                            "color": "#ffffff"
+                          },
+                          {
+                            "type": "INSTANCE",
+                            "name": "arrow-2-right-long",
+                            "position": "absolute",
+                            "left": 319,
+                            "top": 2335,
+                            "width": 24,
+                            "height": 24,
+                            "children": [
+                              {
+                                "type": "INSTANCE",
+                                "name": "ico-bg",
+                                "position": "absolute",
+                                "left": 319,
+                                "top": 2335,
+                                "width": 23,
+                                "height": 23,
+                                "children": [
+                                  {
+                                    "type": "RECTANGLE",
+                                    "name": "ico-bg",
+                                    "position": "absolute",
+                                    "left": 319,
+                                    "top": 2335,
+                                    "width": 23,
+                                    "height": 23,
+                                    "backgroundcolor": "#f4f4f4"
+                                  }
+                                ]
+                              },
+                              {
+                                "type": "GROUP",
+                                "name": "ico-shape",
+                                "position": "absolute",
+                                "left": 322,
+                                "top": 2342,
+                                "width": 17,
+                                "height": 8,
+                                "children": [
+                                  {
+                                    "type": "VECTOR",
+                                    "name": "Vector (Stroke)",
+                                    "position": "absolute",
+                                    "left": 322,
+                                    "top": 2346,
+                                    "width": 16,
+                                    "height": 1,
+                                    "backgroundcolor": "#ffffff"
+                                  },
+                                  {
+                                    "type": "VECTOR",
+                                    "name": "Vector 2 (Stroke)",
+                                    "position": "absolute",
+                                    "left": 334,
+                                    "top": 2342,
+                                    "width": 4,
+                                    "height": 8,
+                                    "backgroundcolor": "#ffffff"
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "type": "TEXT",
+                        "name": "Sample Project",
+                        "text": "Sample \nProject",
+                        "style": {
+                          "fontSize": 64,
+                          "fontWeight": 700,
+                          "fontFamily": "Roboto"
+                        },
+                        "position": "absolute",
+                        "left": 214,
+                        "top": 2199,
+                        "width": 233,
+                        "height": 128,
+                        "color": "#ffffff"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "RECTANGLE",
+                "name": "Rectangle 14",
+                "position": "absolute",
+                "left": 935,
+                "top": 2436,
+                "width": 370,
+                "height": 255,
+                "backgroundcolor": "#c4c4c4"
+              },
+              {
+                "type": "RECTANGLE",
+                "name": "image 18",
+                "position": "absolute",
+                "left": 935,
+                "top": 2436,
+                "width": 370,
+                "height": 255
+              },
+              {
+                "type": "RECTANGLE",
+                "name": "image 15",
+                "position": "absolute",
+                "left": 735,
+                "top": 2151,
+                "width": 570,
+                "height": 255
+              },
+              {
+                "type": "RECTANGLE",
+                "name": "Rectangle 15",
+                "position": "absolute",
+                "left": 435,
+                "top": 2436,
+                "width": 470,
+                "height": 255,
+                "backgroundcolor": "#c4c4c4"
+              },
+              {
+                "type": "RECTANGLE",
+                "name": "image 17",
+                "position": "absolute",
+                "left": 435,
+                "top": 2436,
+                "width": 470,
+                "height": 255
+              },
+              {
+                "type": "RECTANGLE",
+                "name": "Rectangle 16",
+                "position": "absolute",
+                "left": 135,
+                "top": 2436,
+                "width": 270,
+                "height": 255,
+                "backgroundcolor": "#c4c4c4"
+              },
+              {
+                "type": "RECTANGLE",
+                "name": "image 16",
+                "position": "absolute",
+                "left": 135,
+                "top": 2436,
+                "width": 270,
+                "height": 255
+              }
+            ]
+          },
+          {
+            "type": "FRAME",
+            "name": "Footer",
+            "position": "absolute",
+            "left": 0,
+            "top": 3635,
+            "width": 1440,
+            "height": 417,
+            "backgroundcolor": "#ffffff",
+            "children": [
+              {
+                "type": "GROUP",
+                "name": "Group 14",
+                "position": "absolute",
+                "left": 0,
+                "top": 3635,
+                "width": 1440,
+                "height": 417,
+                "children": [
+                  {
+                    "type": "RECTANGLE",
+                    "name": "Rectangle 11",
+                    "position": "absolute",
+                    "left": 0,
+                    "top": 3635,
+                    "width": 1440,
+                    "height": 417,
+                    "backgroundcolor": "#2c2c2c"
+                  },
+                  {
+                    "type": "VECTOR",
+                    "name": "Line",
+                    "position": "absolute",
+                    "left": 0,
+                    "top": 3982,
+                    "width": 1440,
+                    "height": 0,
+                    "backgroundcolor": "#d8d8d8"
+                  },
+                  {
+                    "type": "TEXT",
+                    "name": "© 2016 Landing. All ",
+                    "text": "© 2021 All Rights Reserved",
+                    "style": {
+                      "fontSize": 12,
+                      "fontWeight": 400,
+                      "fontFamily": "Open Sans"
+                    },
+                    "position": "absolute",
+                    "left": 591,
+                    "top": 4006,
+                    "width": 150,
+                    "height": 22,
+                    "color": "#c8c8c8"
+                  }
+                ]
+              },
+              {
+                "type": "RECTANGLE",
+                "name": "Group 11 1",
+                "position": "absolute",
+                "left": 116,
+                "top": 3693,
+                "width": 145,
+                "height": 94
+              },
+              {
+                "type": "FRAME",
+                "name": "4",
+                "position": "absolute",
+                "left": 1035,
+                "top": 3693,
+                "width": 193,
+                "height": 64,
+                "backgroundcolor": "#ffffff",
+                "children": [
+                  {
+                    "type": "TEXT",
+                    "name": "FOLLOW US",
+                    "text": "Social Media",
+                    "style": {
+                      "fontSize": 16,
+                      "fontWeight": 700,
+                      "fontFamily": "Roboto"
+                    },
+                    "position": "absolute",
+                    "left": 1036,
+                    "top": 3694,
+                    "width": 93,
+                    "height": 19,
+                    "color": "#ffffff"
+                  },
+                  {
+                    "type": "FRAME",
+                    "name": "facebook",
+                    "position": "absolute",
+                    "left": 1036,
+                    "top": 3736,
+                    "width": 10,
+                    "height": 19,
+                    "backgroundcolor": "#ffffff",
+                    "children": [
+                      {
+                        "type": "VECTOR",
+                        "name": "Shape",
+                        "position": "absolute",
+                        "left": 1036,
+                        "top": 3736,
+                        "width": 9,
+                        "height": 18,
+                        "backgroundcolor": "#ffffff"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "FRAME",
+                    "name": "twitter",
+                    "position": "absolute",
+                    "left": 1086,
+                    "top": 3739,
+                    "width": 22,
+                    "height": 17,
+                    "backgroundcolor": "#ffffff",
+                    "children": [
+                      {
+                        "type": "VECTOR",
+                        "name": "Shape",
+                        "position": "absolute",
+                        "left": 1086,
+                        "top": 3739,
+                        "width": 21,
+                        "height": 16,
+                        "backgroundcolor": "#ffffff"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "FRAME",
+                    "name": "Linked In",
+                    "position": "absolute",
+                    "left": 1148,
+                    "top": 3737,
+                    "width": 20,
+                    "height": 20,
+                    "backgroundcolor": "#ffffff",
+                    "children": [
+                      {
+                        "type": "BOOLEAN_OPERATION",
+                        "name": "Shape",
+                        "position": "absolute",
+                        "left": 1148,
+                        "top": 3737,
+                        "width": 19,
+                        "height": 18,
+                        "backgroundcolor": "#ffffff",
+                        "children": [
+                          {
+                            "type": "VECTOR",
+                            "name": "Path",
+                            "position": "absolute",
+                            "left": 1148,
+                            "top": 3737,
+                            "width": 19,
+                            "height": 18,
+                            "backgroundcolor": "#dadada"
+                          },
+                          {
+                            "type": "VECTOR",
+                            "name": "Path",
+                            "position": "absolute",
+                            "left": 1151,
+                            "top": 3744,
+                            "width": 2,
+                            "height": 8,
+                            "backgroundcolor": "#dadada"
+                          },
+                          {
+                            "type": "VECTOR",
+                            "name": "Path",
+                            "position": "absolute",
+                            "left": 1151,
+                            "top": 3740,
+                            "width": 3,
+                            "height": 2,
+                            "backgroundcolor": "#dadada"
+                          },
+                          {
+                            "type": "VECTOR",
+                            "name": "Path",
+                            "position": "absolute",
+                            "left": 1156,
+                            "top": 3744,
+                            "width": 8,
+                            "height": 8,
+                            "backgroundcolor": "#dadada"
+                          },
+                          {
+                            "type": "VECTOR",
+                            "name": "Path",
+                            "position": "absolute",
+                            "left": 1158,
+                            "top": 3746,
+                            "width": 1,
+                            "height": 1,
+                            "backgroundcolor": "#dadada"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "FRAME",
+                    "name": "pininterest",
+                    "position": "absolute",
+                    "left": 1208,
+                    "top": 3738,
+                    "width": 14,
+                    "height": 19,
+                    "backgroundcolor": "#ffffff",
+                    "children": [
+                      {
+                        "type": "VECTOR",
+                        "name": "Shape",
+                        "position": "absolute",
+                        "left": 1208,
+                        "top": 3738,
+                        "width": 13,
+                        "height": 18,
+                        "backgroundcolor": "#ffffff"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "GROUP",
+                "name": "Group 2",
+                "position": "absolute",
+                "left": 360,
+                "top": 3693,
+                "width": 605,
+                "height": 229,
+                "children": [
+                  {
+                    "type": "TEXT",
+                    "name": "512.333.2222",
+                    "text": "512.333.2222",
+                    "style": {
+                      "fontSize": 14,
+                      "fontWeight": 500,
+                      "fontFamily": "Roboto"
+                    },
+                    "position": "absolute",
+                    "left": 651,
+                    "top": 3842,
+                    "width": 117,
+                    "height": 23,
+                    "color": "#ffffff"
+                  },
+                  {
+                    "type": "TEXT",
+                    "name": "sampleemail@gmail.com",
+                    "text": "sampleemail@gmail.com",
+                    "style": {
+                      "fontSize": 14,
+                      "fontWeight": 500,
+                      "fontFamily": "Roboto"
+                    },
+                    "position": "absolute",
+                    "left": 651,
+                    "top": 3898,
+                    "width": 181,
+                    "height": 24,
+                    "color": "#ffffff"
+                  },
+                  {
+                    "type": "TEXT",
+                    "name": "Пн-Пт с 10:00 - 19:00",
+                    "text": "Пн-Пт с 10:00 - 19:00",
+                    "style": {
+                      "fontSize": 16,
+                      "fontWeight": 600,
+                      "fontFamily": "Open Sans"
+                    },
+                    "position": "absolute",
+                    "left": 711,
+                    "top": 3855,
+                    "width": 169,
+                    "height": 24,
+                    "color": "#ffffff"
+                  },
+                  {
+                    "type": "TEXT",
+                    "name": "Main",
+                    "text": "Main",
+                    "style": {
+                      "fontSize": 14,
+                      "fontWeight": 500,
+                      "fontFamily": "Roboto"
+                    },
+                    "position": "absolute",
+                    "left": 361,
+                    "top": 3738,
+                    "width": 82,
+                    "height": 24,
+                    "color": "#ffffff"
+                  },
+                  {
+                    "type": "TEXT",
+                    "name": "Gallery",
+                    "text": "Gallery",
+                    "style": {
+                      "fontSize": 14,
+                      "fontWeight": 500,
+                      "fontFamily": "Roboto"
+                    },
+                    "position": "absolute",
+                    "left": 361,
+                    "top": 3778,
+                    "width": 56,
+                    "height": 23,
+                    "color": "#ffffff"
+                  },
+                  {
+                    "type": "TEXT",
+                    "name": "Projects",
+                    "text": "Projects",
+                    "style": {
+                      "fontSize": 14,
+                      "fontWeight": 500,
+                      "fontFamily": "Roboto"
+                    },
+                    "position": "absolute",
+                    "left": 361,
+                    "top": 3818,
+                    "width": 61,
+                    "height": 24,
+                    "color": "#ffffff"
+                  },
+                  {
+                    "type": "TEXT",
+                    "name": "Certifications",
+                    "text": "Certifications",
+                    "style": {
+                      "fontSize": 14,
+                      "fontWeight": 500,
+                      "fontFamily": "Roboto"
+                    },
+                    "position": "absolute",
+                    "left": 361,
+                    "top": 3858,
+                    "width": 94,
+                    "height": 23,
+                    "color": "#ffffff"
+                  },
+                  {
+                    "type": "TEXT",
+                    "name": "Contacts",
+                    "text": "Contacts",
+                    "style": {
+                      "fontSize": 14,
+                      "fontWeight": 500,
+                      "fontFamily": "Roboto"
+                    },
+                    "position": "absolute",
+                    "left": 361,
+                    "top": 3898,
+                    "width": 64,
+                    "height": 24,
+                    "color": "#ffffff"
+                  },
+                  {
+                    "type": "TEXT",
+                    "name": "Information",
+                    "text": "Information",
+                    "style": {
+                      "fontSize": 16,
+                      "fontWeight": 700,
+                      "fontFamily": "Roboto"
+                    },
+                    "position": "absolute",
+                    "left": 360,
+                    "top": 3693,
+                    "width": 103,
+                    "height": 20,
+                    "color": "#ffffff"
+                  },
+                  {
+                    "type": "TEXT",
+                    "name": "Contacts",
+                    "text": "Contacts",
+                    "style": {
+                      "fontSize": 16,
+                      "fontWeight": 700,
+                      "fontFamily": "Roboto"
+                    },
+                    "position": "absolute",
+                    "left": 620,
+                    "top": 3693,
+                    "width": 75,
+                    "height": 20,
+                    "color": "#ffffff"
+                  },
+                  {
+                    "type": "GROUP",
+                    "name": "Group",
+                    "position": "absolute",
+                    "left": 681,
+                    "top": 3859,
+                    "width": 16,
+                    "height": 15,
+                    "children": [
+                      {
+                        "type": "GROUP",
+                        "name": "Group",
+                        "position": "absolute",
+                        "left": 681,
+                        "top": 3859,
+                        "width": 16,
+                        "height": 15,
+                        "children": [
+                          {
+                            "type": "VECTOR",
+                            "name": "Vector",
+                            "position": "absolute",
+                            "left": 681,
+                            "top": 3859,
+                            "width": 16,
+                            "height": 15,
+                            "backgroundcolor": "#4598ff"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "VECTOR",
+                    "name": "Vector",
+                    "position": "absolute",
+                    "left": 621,
+                    "top": 3738,
+                    "width": 11,
+                    "height": 16
+                  },
+                  {
+                    "type": "GROUP",
+                    "name": "Group",
+                    "position": "absolute",
+                    "left": 621,
+                    "top": 3842,
+                    "width": 16,
+                    "height": 15,
+                    "children": [
+                      {
+                        "type": "GROUP",
+                        "name": "Group",
+                        "position": "absolute",
+                        "left": 621,
+                        "top": 3842,
+                        "width": 16,
+                        "height": 15,
+                        "children": [
+                          {
+                            "type": "VECTOR",
+                            "name": "Vector",
+                            "position": "absolute",
+                            "left": 621,
+                            "top": 3842,
+                            "width": 16,
+                            "height": 15
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "GROUP",
+                    "name": "Group",
+                    "position": "absolute",
+                    "left": 621,
+                    "top": 3903,
+                    "width": 16,
+                    "height": 11,
+                    "children": [
+                      {
+                        "type": "VECTOR",
+                        "name": "Vector",
+                        "position": "absolute",
+                        "left": 621,
+                        "top": 3903,
+                        "width": 16,
+                        "height": 11
+                      }
+                    ]
+                  },
+                  {
+                    "type": "TEXT",
+                    "name": "1234 Sample Street Austin Texas 78704",
+                    "text": "1234 Sample Street\nAustin Texas 78704",
+                    "style": {
+                      "fontSize": 14,
+                      "fontWeight": 500,
+                      "fontFamily": "Roboto"
+                    },
+                    "position": "absolute",
+                    "left": 651,
+                    "top": 3738,
+                    "width": 314,
+                    "height": 72,
+                    "color": "#ffffff"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "GROUP",
+            "name": "Group 82",
+            "position": "absolute",
+            "left": 135,
+            "top": 2912,
+            "width": 1170,
+            "height": 603,
+            "children": [
+              {
+                "type": "TEXT",
+                "name": "Contact Us",
+                "text": "Contact Us",
+                "style": {
+                  "fontSize": 64,
+                  "fontWeight": 300,
+                  "fontFamily": "Roboto"
+                },
+                "position": "absolute",
+                "left": 135,
+                "top": 2912,
+                "width": 312,
+                "height": 64,
+                "color": "#bdbdbd"
+              },
+              {
+                "type": "RECTANGLE",
+                "name": "image 12",
+                "position": "absolute",
+                "left": 556,
+                "top": 2998,
+                "width": 749,
+                "height": 369
+              },
+              {
+                "type": "FRAME",
+                "name": "Frame 11",
+                "position": "absolute",
+                "left": 135,
+                "top": 3444,
+                "width": 221,
+                "height": 71,
+                "backgroundcolor": "#ffffff",
+                "children": [
+                  {
+                    "type": "RECTANGLE",
+                    "name": "Rectangle 1",
+                    "position": "absolute",
+                    "left": 135,
+                    "top": 3444,
+                    "width": 222,
+                    "height": 71,
+                    "backgroundcolor": "#333333"
+                  },
+                  {
+                    "type": "GROUP",
+                    "name": "Group 18",
+                    "position": "absolute",
+                    "left": 182,
+                    "top": 3467,
+                    "width": 126,
+                    "height": 24,
+                    "children": [
+                      {
+                        "type": "GROUP",
+                        "name": "Group 81",
+                        "position": "absolute",
+                        "left": 182,
+                        "top": 3467,
+                        "width": 126,
+                        "height": 24,
+                        "children": [
+                          {
+                            "type": "TEXT",
+                            "name": "Send Email",
+                            "text": "Send Email",
+                            "style": {
+                              "fontSize": 12,
+                              "fontWeight": 400,
+                              "fontFamily": "Roboto"
+                            },
+                            "position": "absolute",
+                            "left": 182,
+                            "top": 3473,
+                            "width": 90,
+                            "height": 12,
+                            "color": "#ffffff"
+                          },
+                          {
+                            "type": "INSTANCE",
+                            "name": "arrow-2-right-long",
+                            "position": "absolute",
+                            "left": 284,
+                            "top": 3467,
+                            "width": 24,
+                            "height": 24,
+                            "children": [
+                              {
+                                "type": "INSTANCE",
+                                "name": "ico-bg",
+                                "position": "absolute",
+                                "left": 284,
+                                "top": 3467,
+                                "width": 23,
+                                "height": 23,
+                                "children": [
+                                  {
+                                    "type": "RECTANGLE",
+                                    "name": "ico-bg",
+                                    "position": "absolute",
+                                    "left": 284,
+                                    "top": 3467,
+                                    "width": 23,
+                                    "height": 23,
+                                    "backgroundcolor": "#f4f4f4"
+                                  }
+                                ]
+                              },
+                              {
+                                "type": "GROUP",
+                                "name": "ico-shape",
+                                "position": "absolute",
+                                "left": 287,
+                                "top": 3475,
+                                "width": 17,
+                                "height": 8,
+                                "children": [
+                                  {
+                                    "type": "VECTOR",
+                                    "name": "Vector (Stroke)",
+                                    "position": "absolute",
+                                    "left": 287,
+                                    "top": 3478,
+                                    "width": 16,
+                                    "height": 1,
+                                    "backgroundcolor": "#ffffff"
+                                  },
+                                  {
+                                    "type": "VECTOR",
+                                    "name": "Vector 2 (Stroke)",
+                                    "position": "absolute",
+                                    "left": 299,
+                                    "top": 3475,
+                                    "width": 4,
+                                    "height": 8,
+                                    "backgroundcolor": "#ffffff"
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "RECTANGLE",
+                "name": "Rectangle",
+                "position": "absolute",
+                "left": 135,
+                "top": 2998,
+                "width": 391,
+                "height": 46,
+                "backgroundcolor": "#f3f3f3"
+              },
+              {
+                "type": "TEXT",
+                "name": "Name",
+                "text": "Name",
+                "style": {
+                  "fontSize": 14,
+                  "fontWeight": 400,
+                  "fontFamily": "Roboto"
+                },
+                "position": "absolute",
+                "left": 156,
+                "top": 3013,
+                "width": 39,
+                "height": 16,
+                "color": "#8d8d8d"
+              },
+              {
+                "type": "RECTANGLE",
+                "name": "Rectangle",
+                "position": "absolute",
+                "left": 135,
+                "top": 3054,
+                "width": 391,
+                "height": 45,
+                "backgroundcolor": "#f3f3f3"
+              },
+              {
+                "type": "TEXT",
+                "name": "Phone Number*",
+                "text": "Phone Number*",
+                "style": {
+                  "fontSize": 14,
+                  "fontWeight": 400,
+                  "fontFamily": "Roboto"
+                },
+                "position": "absolute",
+                "left": 156,
+                "top": 3068,
+                "width": 106,
+                "height": 16,
+                "color": "#8d8d8d"
+              },
+              {
+                "type": "RECTANGLE",
+                "name": "Rectangle",
+                "position": "absolute",
+                "left": 135,
+                "top": 3109,
+                "width": 391,
+                "height": 46,
+                "backgroundcolor": "#f3f3f3"
+              },
+              {
+                "type": "TEXT",
+                "name": "E-mail*",
+                "text": "E-mail*",
+                "style": {
+                  "fontSize": 14,
+                  "fontWeight": 400,
+                  "fontFamily": "Roboto"
+                },
+                "position": "absolute",
+                "left": 156,
+                "top": 3123,
+                "width": 48,
+                "height": 16,
+                "color": "#8d8d8d"
+              },
+              {
+                "type": "RECTANGLE",
+                "name": "Rectangle",
+                "position": "absolute",
+                "left": 135,
+                "top": 3165,
+                "width": 391,
+                "height": 45,
+                "backgroundcolor": "#f3f3f3"
+              },
+              {
+                "type": "TEXT",
+                "name": "Interested In",
+                "text": "Interested In",
+                "style": {
+                  "fontSize": 14,
+                  "fontWeight": 400,
+                  "fontFamily": "Roboto"
+                },
+                "position": "absolute",
+                "left": 156,
+                "top": 3179,
+                "width": 85,
+                "height": 16,
+                "color": "#8d8d8d"
+              },
+              {
+                "type": "RECTANGLE",
+                "name": "Rectangle",
+                "position": "absolute",
+                "left": 135,
+                "top": 3220,
+                "width": 391,
+                "height": 147,
+                "backgroundcolor": "#f3f3f3"
+              },
+              {
+                "type": "TEXT",
+                "name": "Message*",
+                "text": "Message*",
+                "style": {
+                  "fontSize": 14,
+                  "fontWeight": 400,
+                  "fontFamily": "Roboto"
+                },
+                "position": "absolute",
+                "left": 156,
+                "top": 3234,
+                "width": 67,
+                "height": 16,
+                "color": "#8d8d8d"
+              }
+            ]
+          },
+          {
+            "type": "FRAME",
+            "name": "Component 1",
+            "position": "absolute",
+            "left": 0,
+            "top": 0,
+            "width": 1440,
+            "height": 102,
+            "backgroundcolor": "#ffffff",
+            "children": [
+              {
+                "type": "RECTANGLE",
+                "name": "Rectangle 20",
+                "position": "absolute",
+                "left": 0,
+                "top": 0,
+                "width": 1440,
+                "height": 102,
+                "backgroundcolor": "#ffffff"
+              },
+              {
+                "type": "GROUP",
+                "name": "Group 11",
+                "position": "absolute",
+                "left": 135,
+                "top": 29,
+                "width": 70,
+                "height": 43,
+                "children": [
+                  {
+                    "type": "FRAME",
+                    "name": "Group 8",
+                    "position": "absolute",
+                    "left": 136,
+                    "top": 29,
+                    "width": 68,
+                    "height": 41,
+                    "children": [
+                      {
+                        "type": "VECTOR",
+                        "name": "Vector",
+                        "position": "absolute",
+                        "left": 180,
+                        "top": 49,
+                        "width": 3,
+                        "height": 4,
+                        "backgroundcolor": "#333333"
+                      },
+                      {
+                        "type": "VECTOR",
+                        "name": "Vector",
+                        "position": "absolute",
+                        "left": 181,
+                        "top": 51,
+                        "width": 2,
+                        "height": 0,
+                        "backgroundcolor": "#333333"
+                      },
+                      {
+                        "type": "VECTOR",
+                        "name": "Vector",
+                        "position": "absolute",
+                        "left": 177,
+                        "top": 43,
+                        "width": 2,
+                        "height": 1,
+                        "backgroundcolor": "#333333"
+                      },
+                      {
+                        "type": "VECTOR",
+                        "name": "Vector",
+                        "position": "absolute",
+                        "left": 173,
+                        "top": 35,
+                        "width": 5,
+                        "height": 5,
+                        "backgroundcolor": "#333333"
+                      },
+                      {
+                        "type": "VECTOR",
+                        "name": "Vector",
+                        "position": "absolute",
+                        "left": 175,
+                        "top": 36,
+                        "width": 2,
+                        "height": 2,
+                        "backgroundcolor": "#333333"
+                      },
+                      {
+                        "type": "VECTOR",
+                        "name": "Vector",
+                        "position": "absolute",
+                        "left": 169,
+                        "top": 39,
+                        "width": 7,
+                        "height": 13,
+                        "backgroundcolor": "#333333"
+                      },
+                      {
+                        "type": "VECTOR",
+                        "name": "Vector",
+                        "position": "absolute",
+                        "left": 176,
+                        "top": 39,
+                        "width": 5,
+                        "height": 8,
+                        "backgroundcolor": "#333333"
+                      },
+                      {
+                        "type": "VECTOR",
+                        "name": "Vector",
+                        "position": "absolute",
+                        "left": 175,
+                        "top": 29,
+                        "width": 2,
+                        "height": 4,
+                        "backgroundcolor": "#333333"
+                      },
+                      {
+                        "type": "VECTOR",
+                        "name": "Vector",
+                        "position": "absolute",
+                        "left": 175,
+                        "top": 33,
+                        "width": 1,
+                        "height": 1,
+                        "backgroundcolor": "#333333"
+                      },
+                      {
+                        "type": "VECTOR",
+                        "name": "Vector",
+                        "position": "absolute",
+                        "left": 157,
+                        "top": 29,
+                        "width": 5,
+                        "height": 25,
+                        "backgroundcolor": "#333333"
+                      },
+                      {
+                        "type": "VECTOR",
+                        "name": "Vector",
+                        "position": "absolute",
+                        "left": 157,
+                        "top": 30,
+                        "width": 1,
+                        "height": 0,
+                        "backgroundcolor": "#333333"
+                      },
+                      {
+                        "type": "VECTOR",
+                        "name": "Vector",
+                        "position": "absolute",
+                        "left": 157,
+                        "top": 31,
+                        "width": 1,
+                        "height": 0,
+                        "backgroundcolor": "#333333"
+                      },
+                      {
+                        "type": "VECTOR",
+                        "name": "Vector",
+                        "position": "absolute",
+                        "left": 157,
+                        "top": 32,
+                        "width": 1,
+                        "height": 0,
+                        "backgroundcolor": "#333333"
+                      },
+                      {
+                        "type": "VECTOR",
+                        "name": "Vector",
+                        "position": "absolute",
+                        "left": 157,
+                        "top": 33,
+                        "width": 1,
+                        "height": 0,
+                        "backgroundcolor": "#333333"
+                      },
+                      {
+                        "type": "VECTOR",
+                        "name": "Vector",
+                        "position": "absolute",
+                        "left": 157,
+                        "top": 34,
+                        "width": 1,
+                        "height": 0,
+                        "backgroundcolor": "#333333"
+                      },
+                      {
+                        "type": "VECTOR",
+                        "name": "Vector",
+                        "position": "absolute",
+                        "left": 157,
+                        "top": 35,
+                        "width": 1,
+                        "height": 0,
+                        "backgroundcolor": "#333333"
+                      },
+                      {
+                        "type": "VECTOR",
+                        "name": "Vector",
+                        "position": "absolute",
+                        "left": 157,
+                        "top": 36,
+                        "width": 1,
+                        "height": 0,
+                        "backgroundcolor": "#333333"
+                      },
+                      {
+                        "type": "VECTOR",
+                        "name": "Vector",
+                        "position": "absolute",
+                        "left": 157,
+                        "top": 37,
+                        "width": 1,
+                        "height": 0,
+                        "backgroundcolor": "#333333"
+                      },
+                      {
+                        "type": "VECTOR",
+                        "name": "Vector",
+                        "position": "absolute",
+                        "left": 157,
+                        "top": 38,
+                        "width": 1,
+                        "height": 0,
+                        "backgroundcolor": "#333333"
+                      },
+                      {
+                        "type": "VECTOR",
+                        "name": "Vector",
+                        "position": "absolute",
+                        "left": 157,
+                        "top": 40,
+                        "width": 1,
+                        "height": 0,
+                        "backgroundcolor": "#333333"
+                      },
+                      {
+                        "type": "VECTOR",
+                        "name": "Vector",
+                        "position": "absolute",
+                        "left": 157,
+                        "top": 41,
+                        "width": 1,
+                        "height": 0,
+                        "backgroundcolor": "#333333"
+                      },
+                      {
+                        "type": "VECTOR",
+                        "name": "Vector",
+                        "position": "absolute",
+                        "left": 157,
+                        "top": 42,
+                        "width": 1,
+                        "height": 0,
+                        "backgroundcolor": "#333333"
+                      },
+                      {
+                        "type": "VECTOR",
+                        "name": "Vector",
+                        "position": "absolute",
+                        "left": 157,
+                        "top": 43,
+                        "width": 1,
+                        "height": 0,
+                        "backgroundcolor": "#333333"
+                      },
+                      {
+                        "type": "VECTOR",
+                        "name": "Vector",
+                        "position": "absolute",
+                        "left": 157,
+                        "top": 44,
+                        "width": 1,
+                        "height": 0,
+                        "backgroundcolor": "#333333"
+                      },
+                      {
+                        "type": "VECTOR",
+                        "name": "Vector",
+                        "position": "absolute",
+                        "left": 157,
+                        "top": 45,
+                        "width": 1,
+                        "height": 0,
+                        "backgroundcolor": "#333333"
+                      },
+                      {
+                        "type": "VECTOR",
+                        "name": "Vector",
+                        "position": "absolute",
+                        "left": 157,
+                        "top": 46,
+                        "width": 1,
+                        "height": 0,
+                        "backgroundcolor": "#333333"
+                      },
+                      {
+                        "type": "VECTOR",
+                        "name": "Vector",
+                        "position": "absolute",
+                        "left": 157,
+                        "top": 47,
+                        "width": 1,
+                        "height": 0,
+                        "backgroundcolor": "#333333"
+                      },
+                      {
+                        "type": "VECTOR",
+                        "name": "Vector",
+                        "position": "absolute",
+                        "left": 157,
+                        "top": 48,
+                        "width": 1,
+                        "height": 0,
+                        "backgroundcolor": "#333333"
+                      },
+                      {
+                        "type": "VECTOR",
+                        "name": "Vector",
+                        "position": "absolute",
+                        "left": 157,
+                        "top": 49,
+                        "width": 1,
+                        "height": 0,
+                        "backgroundcolor": "#333333"
+                      },
+                      {
+                        "type": "VECTOR",
+                        "name": "Vector",
+                        "position": "absolute",
+                        "left": 157,
+                        "top": 50,
+                        "width": 1,
+                        "height": 0,
+                        "backgroundcolor": "#333333"
+                      },
+                      {
+                        "type": "VECTOR",
+                        "name": "Vector",
+                        "position": "absolute",
+                        "left": 157,
+                        "top": 51,
+                        "width": 1,
+                        "height": 0,
+                        "backgroundcolor": "#333333"
+                      },
+                      {
+                        "type": "VECTOR",
+                        "name": "Vector",
+                        "position": "absolute",
+                        "left": 157,
+                        "top": 52,
+                        "width": 1,
+                        "height": 0,
+                        "backgroundcolor": "#333333"
+                      },
+                      {
+                        "type": "VECTOR",
+                        "name": "Vector",
+                        "position": "absolute",
+                        "left": 157,
+                        "top": 53,
+                        "width": 1,
+                        "height": 0,
+                        "backgroundcolor": "#333333"
+                      },
+                      {
+                        "type": "VECTOR",
+                        "name": "Vector",
+                        "position": "absolute",
+                        "left": 160,
+                        "top": 30,
+                        "width": 1,
+                        "height": 1,
+                        "backgroundcolor": "#333333"
+                      },
+                      {
+                        "type": "VECTOR",
+                        "name": "Vector",
+                        "position": "absolute",
+                        "left": 166,
+                        "top": 32,
+                        "width": 0,
+                        "height": 11,
+                        "backgroundcolor": "#333333"
+                      },
+                      {
+                        "type": "VECTOR",
+                        "name": "Vector",
+                        "position": "absolute",
+                        "left": 165,
+                        "top": 44,
+                        "width": 2,
+                        "height": 0,
+                        "backgroundcolor": "#333333"
+                      },
+                      {
+                        "type": "VECTOR",
+                        "name": "Vector",
+                        "position": "absolute",
+                        "left": 165,
+                        "top": 29,
+                        "width": 2,
+                        "height": 19,
+                        "backgroundcolor": "#333333"
+                      },
+                      {
+                        "type": "VECTOR",
+                        "name": "Vector",
+                        "position": "absolute",
+                        "left": 165,
+                        "top": 31,
+                        "width": 2,
+                        "height": 0,
+                        "backgroundcolor": "#333333"
+                      },
+                      {
+                        "type": "VECTOR",
+                        "name": "Vector",
+                        "position": "absolute",
+                        "left": 165,
+                        "top": 32,
+                        "width": 2,
+                        "height": 0,
+                        "backgroundcolor": "#333333"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "VECTOR",
+                    "name": "Vector",
+                    "position": "absolute",
+                    "left": 135,
+                    "top": 60,
+                    "width": 68,
+                    "height": 12
+                  }
+                ]
+              },
+              {
+                "type": "TEXT",
+                "name": "Main",
+                "text": "Main",
+                "style": {
+                  "fontSize": 12,
+                  "fontWeight": 400,
+                  "fontFamily": "Roboto"
+                },
+                "position": "absolute",
+                "left": 549,
+                "top": 44,
+                "width": 68,
+                "height": 11,
+                "color": "#333333"
+              },
+              {
+                "type": "TEXT",
+                "name": "GALLERY",
+                "text": "GALLERY",
+                "style": {
+                  "fontSize": 12,
+                  "fontWeight": 400,
+                  "fontFamily": "Roboto"
+                },
+                "position": "absolute",
+                "left": 663,
+                "top": 44,
+                "width": 65,
+                "height": 12,
+                "color": "#333333"
+              },
+              {
+                "type": "TEXT",
+                "name": "PROJECTS",
+                "text": "PROJECTS",
+                "style": {
+                  "fontSize": 12,
+                  "fontWeight": 400,
+                  "fontFamily": "Roboto"
+                },
+                "position": "absolute",
+                "left": 789,
+                "top": 45,
+                "width": 76,
+                "height": 11,
+                "color": "#333333"
+              },
+              {
+                "type": "TEXT",
+                "name": "COntacts",
+                "text": "COntacts",
+                "style": {
+                  "fontSize": 12,
+                  "fontWeight": 400,
+                  "fontFamily": "Roboto"
+                },
+                "position": "absolute",
+                "left": 1092,
+                "top": 44,
+                "width": 79,
+                "height": 11,
+                "color": "#333333"
+              },
+              {
+                "type": "TEXT",
+                "name": "CERTIFICATIONS",
+                "text": "CERTIFICATIONS",
+                "style": {
+                  "fontSize": 12,
+                  "fontWeight": 400,
+                  "fontFamily": "Roboto"
+                },
+                "position": "absolute",
+                "left": 920,
+                "top": 45,
+                "width": 123,
+                "height": 11,
+                "color": "#333333"
+              },
+              {
+                "type": "RECTANGLE",
+                "name": "Rectangle 18",
+                "position": "absolute",
+                "left": 535,
+                "top": 60,
+                "width": 68,
+                "height": 0,
+                "backgroundcolor": "#333333"
+              },
+              {
+                "type": "RECTANGLE",
+                "name": "Rectangle 19",
+                "position": "absolute",
+                "left": 535,
+                "top": 39,
+                "width": 68,
+                "height": 0,
+                "backgroundcolor": "#333333"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]
