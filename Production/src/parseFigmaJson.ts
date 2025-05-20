@@ -1,4 +1,7 @@
 import fs from 'fs';
+import { color } from './Types';
+import { node } from './Types';
+import { simpleNodeInterface } from './Types';
 
 function rgbaToHex(color: color) {
   // Helper to convert a float 0-1 to 2-digit hex
@@ -11,60 +14,6 @@ function rgbaToHex(color: color) {
   const bHex = toHex(color.b);
 
   return `#${rHex}${gHex}${bHex}`;
-}
-
-interface color{
-    r : number,
-    g : number,
-    b : number,
-    a?: number
-}
-
-interface simpleNodeInterface {
-    type    :string,
-    name    :string | undefined, 
-    text?   :string,
-    style?  : {
-            fontSize        :string,
-            fontStyle       :"normal", 
-            fontWeight      : string,
-            fontFamily      : string,
-            letterSpacing?  : string,
-            textAlign?      :'LEFT' | 'RIGHT',
-            textTransform?  :"uppercase" | "capitalize",
-    },
-    position?:"absolute" | "relative",
-    left?    :string,
-    top?     :string,
-    width?   :string,
-    height?  :string,
-    color?   :string,
-    backgroundcolor? : string,
-    children? : simpleNodeInterface[],
-}
-
-interface node {
-    type : string,
-    name : string | undefined,
-    characters? : string,
-    style? : {
-        fontSize : number,
-        fontWeight : number,
-        fontFamily : string,
-        letterSpacing : number,
-        textAlignHorizontal? : 'LEFT' | 'RIGHT',
-        textCase? : string,
-    }
-    absoluteBoundingBox? :{
-        x : number,
-        y : number,
-        width : number,
-        height : number,
-    },
-    fills? :[{
-            color: color
-        }],
-    children : node[]
 }
 
 function simplifyNode(node:node) {
@@ -126,7 +75,7 @@ function simplifyNode(node:node) {
 }
 
 
-function parseFigmaJson(){
+async function parseFigmaJson(){
     const figmaData = JSON.parse(fs.readFileSync('./Outputs/figma.json', 'utf-8'));
     // Entry point (usually top-level frame)
     const simplifiedTree = figmaData.document.children.map(simplifyNode);
