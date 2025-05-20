@@ -1,3 +1,9 @@
 import fetchFigmaDesign from "./fetchFigmaJSON"
+import parseFigmaJson from "./parseFigmaJson";
 
-fetchFigmaDesign(null);
+async function AGENT() {
+    await fetchFigmaDesign(null);
+    parseFigmaJson();
+}
+
+AGENT();

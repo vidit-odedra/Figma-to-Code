@@ -1,2 +1,9 @@
 Generate_IRs/node_modules
-Generate_IRs/env
+Generate_IRs/.env
+Generate_IRs/figma.json
+Generate_IRs/layout-tree.json
+Generate_IRs/figma_prompt.txt
+
+Production/node_modules
+Production/.env
+Production/Outputs
