@@ -11,10 +11,12 @@ const DEFAULT_FILE_ID = 'wLMZ3Fsx8whJVOwVHOrPsw'; // from https://www.figma.com/
 async function fetchFigmaDesign(fileID: string | null) {
     let FILE_ID = DEFAULT_FILE_ID
     if(fileID){
-        FILE_ID = fileID;
-        console.log("No file ID provided, using default");
+      FILE_ID = fileID;
+      console.log("Reading the input Figma file")
     }
-
+    else{
+      console.log("No file ID provided, using default");
+    }
     try {
     const response = await axios.get(`https://api.figma.com/v1/files/${FILE_ID}`, {
       headers: {

@@ -28,6 +28,10 @@ export interface simpleNodeInterface {
     color?   :string,
     backgroundcolor? : string,
     children? : simpleNodeInterface[],
+    blur?           :string,
+    opacity?        :string,
+    border?         :string,
+    borderColor?    :string,
 }
 
 export interface node {
@@ -49,7 +53,20 @@ export interface node {
         height : number,
     },
     fills? :[{
-            color: color
+            color: color,
+            opacity: number
         }],
+    effects :[{
+        type : string,
+        visible: Boolean,
+        radius: number
+    }],
+    strokes:{
+        blendMode: string,
+        type: string,
+        color: color,
+    }[],
+    strokeWeight: number,
     children : node[]
+
 }

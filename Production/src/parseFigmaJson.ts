@@ -17,16 +17,15 @@ function rgbaToHex(color: color) {
 }
 
 function simplifyNode(node:node) {
-    const simpleNode : simpleNodeInterface= {
-        type: node.type,
-        name: node.name || undefined
-    };
+  const simpleNode : simpleNodeInterface= {
+    type: node.type,
+    name: node.name || undefined
+  };
 
   // Extract text content
   if (node.type === 'TEXT' && node.characters != undefined) {
     simpleNode.text = node.characters;
   }
-
   // Extract styles
   if (node.style) {
     let caps: Boolean= false;
@@ -41,7 +40,6 @@ function simplifyNode(node:node) {
       textAlign: node.style.textAlignHorizontal,
     };
   }
-
   if(node.absoluteBoundingBox){
     simpleNode.position = "absolute";
     simpleNode.left = `${Math.floor(node.absoluteBoundingBox.x)}px `;
@@ -52,20 +50,34 @@ function simplifyNode(node:node) {
   else{
     simpleNode.position = "relative";
   }
-  if(node.fills && node.fills[0] && node.fills[0].color){
-    const val:color = {
-        r: node.fills[0].color.r,
-        g: node.fills[0].color.g,
-        b: node.fills[0].color.b,
-      }
-    const hexcode =  rgbaToHex(val);
-    if(node.type == "TEXT"){
-      simpleNode.color = hexcode;
+  if(node.fills && node.fills[0] ){
+    if( node.fills[0].opacity){
+      simpleNode.opacity = node.fills[0].opacity.toFixed(2)
     }
-    else{
-      simpleNode.backgroundcolor = hexcode;
+    if( node.fills[0].color) {
+      const val:color = {
+          r: node.fills[0].color.r,
+          g: node.fills[0].color.g,
+          b: node.fills[0].color.b,
+        }
+      const hexcode =  rgbaToHex(val);
+      if(node.type == "TEXT"){
+        simpleNode.color = hexcode;
+      }
+      else{
+        simpleNode.backgroundcolor = hexcode;
+      }
     }
   }
+  if(node.strokes && node.strokes.length > 0 && node.strokeWeight){
+    simpleNode.border = node.strokeWeight.toFixed(2);
+    simpleNode.borderColor = rgbaToHex(node.strokes[0].color);
+  }
+  if(node.effects && node.effects[0].type == "LAYER_BLUR" && node.effects[0].visible == true){
+    simpleNode.blur = `${Math.floor(node.effects[0].radius)}px`
+  }
+
+
   // Recursively parse children
   if (node.children && node.children.length > 0) {
     simpleNode.children = node.children.map(simplifyNode);

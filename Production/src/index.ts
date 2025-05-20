@@ -3,7 +3,7 @@ import generatePrompt from "./generatePrompt";
 import parseFigmaJson from "./parseFigmaJson";
 
 async function AGENT() {
-    await fetchFigmaDesign(null);
+    await fetchFigmaDesign('UzJcbRHOTRp3V7xg3iQzqk');
     await parseFigmaJson();
     generatePrompt();
 }
