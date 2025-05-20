@@ -4,7 +4,7 @@ import { simpleNodeInterface } from './Types';
 import { nodeStyle } from './Types';
 
 function styleToStr(style : nodeStyle | undefined) {
-    if(style == undefined) return;
+    if(style == undefined) return "";
     const parts = [];
     
     if (style.fontSize) parts.push(`fontSize: ${style.fontSize}`);
@@ -30,9 +30,11 @@ function nodeToPrompt(node:simpleNodeInterface, indent = 0) {
         if(node.left) line += ` left-[${node.left}px]`;
         if(node.top) line += ` top-[${node.top}px]`;
         if(node.width) line += ` w-[${node.left}px]`;
-        if(node.height) line += ` h-[${node.left}px]`;
-        
+        if(node.height) line += ` h-[${node.left}px]`;     
     }
+    if(node.opacity) line += ` opacity-[${node.opacity}]`;
+    if(node.border) line +=  ` border-[${node.border}px]`;
+    if(node.borderColor) line += ` border-[${node.borderColor}]`
     if (node.children && node.children.length > 0) {
         const childrenText = node.children.map(child => nodeToPrompt(child, indent + 1)).join('\n');
         line += `\n${childrenText}`;

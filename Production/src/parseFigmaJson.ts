@@ -42,10 +42,10 @@ function simplifyNode(node:node) {
   }
   if(node.absoluteBoundingBox){
     simpleNode.position = "absolute";
-    simpleNode.left = `${Math.floor(node.absoluteBoundingBox.x)}px `;
-    simpleNode.top = `${Math.floor(node.absoluteBoundingBox.y)}px `;
-    simpleNode.width = `${Math.floor(node.absoluteBoundingBox.width)}px `;
-    simpleNode.height = `${Math.floor(node.absoluteBoundingBox.height)}px `;
+    simpleNode.left = `${Math.floor(node.absoluteBoundingBox.x)}`;
+    simpleNode.top = `${Math.floor(node.absoluteBoundingBox.y)}`;
+    simpleNode.width = `${Math.floor(node.absoluteBoundingBox.width)}`;
+    simpleNode.height = `${Math.floor(node.absoluteBoundingBox.height)}`;
   }
   else{
     simpleNode.position = "relative";
@@ -71,10 +71,7 @@ function simplifyNode(node:node) {
   }
   if(node.strokes && node.strokes.length > 0 && node.strokeWeight){
     simpleNode.border = node.strokeWeight.toFixed(2);
-    simpleNode.borderColor = rgbaToHex(node.strokes[0].color);
-  }
-  if(node.effects && node.effects[0].type == "LAYER_BLUR" && node.effects[0].visible == true){
-    simpleNode.blur = `${Math.floor(node.effects[0].radius)}px`
+    if(node.strokes[0].color) simpleNode.borderColor = rgbaToHex(node.strokes[0].color);
   }
 
 
