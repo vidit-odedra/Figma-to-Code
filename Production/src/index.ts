@@ -31,7 +31,7 @@ function generateFigmaApiEndpoint(figmaUrl: string): {fileID : string , nodeId?:
 
 
 async function AGENT() {
-    const op = generateFigmaApiEndpoint("https://www.figma.com/design/vjBZhj24aN7yzzR5eaZJiZ/EastWest-Bank?node-id=1-626&t=or8BYJSPHfMGb1ht-0");
+    const op = generateFigmaApiEndpoint("https://www.figma.com/design/vjBZhj24aN7yzzR5eaZJiZ/EastWest-Bank?node-id=1-403&t=B72Kx5v8lRyyp0Dm-0");
     if(op == null || !op.fileID ) return "No input File ID";
     await fetchFigmaDesign(op);
     await parseFigmaJson();

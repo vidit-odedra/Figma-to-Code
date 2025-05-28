@@ -2,7 +2,7 @@ You are a frontend developer. Based on the following UI structure (extracted fro
 This code will be further edited by developers, so clarity, logical structure, and readability are extremely important.
     
 Your task:    
-1.Identify and correctly map UI elements – determine whether each element is a button, input field, label, heading, checkbox, icon, image, etc.
+1.Identify and correctly map UI elements – determine whether each element is a button, input field, label, heading, checkbox, icon, image, etc. If a node has an imageUrl field, treat it as an image and render it using an <img> tag. Use Tailwind classes like rounded, w-12, h-12, object-cover. Use the node’s name or purpose as the alt attribute.
 2.Use semantic HTML – choose the right tags for accessibility and structure (e.g., <button>, <input>, <label>, <section>, etc.).
 3.Preserve layout and positioning – match spacing, alignment, and structure from the Figma design using Flexbox/Grid.
 4.Apply exact styles – replicate colors, font sizes, paddings, margins, border radii, and other visual properties precisely using Tailwind classes.
@@ -19,6 +19,11 @@ Output Format:
     - A single, self-contained React component.
     - Use Tailwind CSS for all styling.
     - Do not include unnecessary boilerplate (e.g., no create-react-app setup).
-    - Assume the component will be placed into a larger codebase. \n 
+    - Assume the component will be placed into a larger codebase. 
+8. For nodes with an `imageUrl`, use an <img> tag:
+    - Set `src` to the `imageUrl`
+    - Set `alt` using the node's name or purpose
+    - Add meaningful Tailwind classes for styling (rounded-full, object-cover, etc.)
+    \n 
 
 start :
