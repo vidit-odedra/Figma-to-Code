@@ -18,6 +18,7 @@ function styleToStr(style : nodeStyle | undefined) {
 }
 
 function nodeToPrompt(node:simpleNodeInterface, indent = 0) {
+    if(!node) return "";
     const pad = '  '.repeat(indent);
     let line = `${pad}- ${node.type}`;
     if (node.name) line += `: "${node.name}"`;
@@ -42,12 +43,11 @@ function nodeToPrompt(node:simpleNodeInterface, indent = 0) {
     return line;
 }
 
-export default function generatePrompt(){
-    const layoutTree: simpleNodeInterface[] = JSON.parse(fs.readFileSync('./Outputs/layout-tree.json', 'utf-8'));
+export default function generatePrompt(parsedFigmaJson: simpleNodeInterface[]){
     
     // Compose final prompt text
-    const promptHeader:string = fs.readFileSync('PromptHeader.txt', 'utf-8');
-    const promptBody:string = layoutTree
+    const promptHeader:string = fs.readFileSync(`${process.env.cwd}PromptHeader.txt`, 'utf-8');
+    const promptBody:string = parsedFigmaJson
         .map(node => nodeToPrompt(node))
         .join('\n');
     
@@ -57,7 +57,7 @@ export default function generatePrompt(){
     
     const finalPrompt = promptHeader + CleanPrompt;
     
-    fs.writeFileSync('./Outputs/figma_prompt.txt', finalPrompt);
-    
     console.log('✅ Prompt text saved as figma_prompt.txt');
+
+    return finalPrompt;
 }

@@ -21,6 +21,9 @@ function simplifyNode(node:node) {
     type: node.type,
     name: node.name || undefined
   };
+  if(node.type == "VECTOR"){
+    return null;
+  }
   // Extract text content
   if (node.type === 'TEXT' && node.characters != undefined) {
     simpleNode.text = node.characters;
@@ -76,28 +79,36 @@ function simplifyNode(node:node) {
 
   // Recursively parse children
   if (node.children && node.children.length > 0) {
-    simpleNode.children = node.children.map(simplifyNode);
+    const children = node.children.map(simplifyNode).filter((child): child is simpleNodeInterface => child !== null);
+    if (children.length > 0) {
+      simpleNode.children = children;
+    }
   }
 
   return simpleNode;
 }
 
 
-async function parseFigmaJson(){
+async function parseFigmaJson(figmaData: any, Log: string){
   try{
-  const figmaData = JSON.parse(fs.readFileSync('./Outputs/figma.json', 'utf-8'));
   
-  if (!figmaData.document || !Array.isArray(figmaData.document.children)) {
-    throw new Error("Invalid Figma JSON structure: 'document.children' is missing or not an array");
-  }
-  const simplifiedTree = figmaData.document.children
-    .map(simplifyNode)
+    if (!figmaData.document || !Array.isArray(figmaData.document.children)) {
+      throw new Error("Invalid Figma JSON structure: 'document.children' is missing or not an array");
+    }
 
-  fs.writeFileSync('./Outputs/layout-tree.json', JSON.stringify(simplifiedTree, null, 2));
-  console.log('✅ Simplified layout tree saved as layout-tree.json');
-}
-catch(e){
-  console.log(e);
+    Log += "Figma JSON read successfully\n";
+
+    const simplifiedTree = figmaData.document.children
+      .map(simplifyNode)
+
+    Log += "✅ Simplified layout tree saved as layout-tree.json\n";
+
+    return {simplifiedTree, Log};
+  }
+  catch(e){
+    const errorMessage = String(e);
+    Log += `Error Parsing Figma JSON: ${errorMessage}\n`;
+    return {simplifiedTree:null, Log};
 }
 }
 

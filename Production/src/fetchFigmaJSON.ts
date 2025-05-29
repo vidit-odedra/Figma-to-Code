@@ -1,33 +1,31 @@
 import axios from 'axios';
-import fs from 'fs'
 import dotenv from "dotenv";
 dotenv.config();
 
-
-// ✅ REPLACE THESE
 const FIGMA_TOKEN = process.env.FIGMA_TOKEN;
-const DEFAULT_FILE_ID = 'wLMZ3Fsx8whJVOwVHOrPsw'; // from https://www.figma.com/file/<FILE_ID>/...
 
-async function fetchFigmaDesign(op:{fileID: string, nodeId?: string}) {
-    console.log(op);
+async function fetchFigmaDesign(op:{fileID: string, nodeId?: string}, Log: string) {
     const APIEndPoint = (op.nodeId) ? `https://api.figma.com/v1/files/${op.fileID}/nodes?ids=${op.nodeId}` : `https://api.figma.com/v1/files/${op.fileID}`;
-    console.log( `Reading from: ${APIEndPoint}`);
+    Log += `Figma API Endpoint: ${APIEndPoint} \n`;
+    console.log(APIEndPoint);
     try {
-    const response = await axios.get(APIEndPoint, {
-      headers: {
-        'X-Figma-Token': FIGMA_TOKEN
+      const response = await axios.get(APIEndPoint, {
+        headers: {
+          'X-Figma-Token': FIGMA_TOKEN
+        }});
+      
+      Log += `Figma API Response: ${response.data} \n`;
+      let designJson = response.data;
+      if(op.nodeId){
+        designJson = designJson.nodes[op.nodeId];
       }
-    });
-    let designJson = response.data;
-    if(op.nodeId){
-      designJson = designJson.nodes[op.nodeId];
-    }
-
-
-    fs.writeFileSync('./Outputs/figma.json', JSON.stringify(designJson, null, 2));
-    console.log('✅ Saved design JSON to figma.json');
-  } catch (err) {
-    console.error('❌ Error fetching design:', err);
+      
+      Log += '✅ Saved design JSON to figma.json';
+      return {designJson, Log};
+    } 
+    catch (err) {
+      Log += `Figma API Error: ${err} \n`;
+      return {designJson: null, Log};
   }
 }
 

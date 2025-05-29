@@ -1,3 +1,4 @@
+import { log } from "console";
 import fetchFigmaDesign from "./fetchFigmaJSON"
 import generatePrompt from "./generatePrompt";
 import parseFigmaJson from "./parseFigmaJson";
@@ -30,14 +31,34 @@ function generateFigmaApiEndpoint(figmaUrl: string): {fileID : string , nodeId?:
 }
 
 
-async function AGENT() {
-    const op = generateFigmaApiEndpoint("https://www.figma.com/design/vjBZhj24aN7yzzR5eaZJiZ/EastWest-Bank?node-id=1-626&t=or8BYJSPHfMGb1ht-0");
-    if(op == null || !op.fileID ) return "No input File ID";
-    await fetchFigmaDesign(op);
-    await parseFigmaJson();
-    generatePrompt();
+export async function AGENT(link : string) {
+    let Log = "";
+    const op = generateFigmaApiEndpoint(link)
+    Log += `Figma API Endpoint: ${op?.fileID} , Node ID: ${op?.nodeId} \n`;
+    if(op == null ) return Log;
+    
+    
+    const {designJson, Log: Log2} = await fetchFigmaDesign(op, Log);
+    Log += Log2;
+    if(designJson == null) return Log;
+    
+    
+    Log += "Design JSON Fetched\n";
+    const {simplifiedTree, Log:Log3} = await parseFigmaJson(designJson, Log);
+    Log += Log3;
+    if(simplifiedTree == null) return Log;
+    
+    
+    console.log("Figma Design Parsed", simplifiedTree);
+    if(simplifiedTree == null) return "No input File ID before generating prompt";
+    console.log("Generating Prompt");
+    const prompt = generatePrompt(simplifiedTree);
+    
+    return prompt;
 }
 
-AGENT();
+//AGENT("https://www.figma.com/design/SjZwyV6LfeI7UKv89EgBpc/Mastercard-priceless?node-id=199-10320&t=QnDmmd2Rxo9Lw346-0");
+
+// Only run AGENT directly if this file is being run directly
 // https://www.figma.com/design/vjBZhj24aN7yzzR5eaZJiZ/EastWest-Bank?node-id=1-403&t=M6tuIlIdxaoxLfTI-4
 // https://www.figma.com/design/vjBZhj24aN7yzzR5eaZJiZ/EastWest-Bank?node-id=1-626&t=or8BYJSPHfMGb1ht-0

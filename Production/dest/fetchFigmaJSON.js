@@ -13,31 +13,34 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const axios_1 = __importDefault(require("axios"));
-const fs_1 = __importDefault(require("fs"));
 const dotenv_1 = __importDefault(require("dotenv"));
 dotenv_1.default.config();
 // ✅ REPLACE THESE
 const FIGMA_TOKEN = process.env.FIGMA_TOKEN;
 const DEFAULT_FILE_ID = 'wLMZ3Fsx8whJVOwVHOrPsw'; // from https://www.figma.com/file/<FILE_ID>/...
-function fetchFigmaDesign(fileID) {
+function fetchFigmaDesign(op, Log) {
     return __awaiter(this, void 0, void 0, function* () {
-        let FILE_ID = DEFAULT_FILE_ID;
-        if (fileID) {
-            FILE_ID = fileID;
-            console.log("No file ID provided, using default");
-        }
+        const APIEndPoint = (op.nodeId) ? `https://api.figma.com/v1/files/${op.fileID}/nodes?ids=${op.nodeId}` : `https://api.figma.com/v1/files/${op.fileID}`;
+        Log += `Figma API Endpoint: ${APIEndPoint} with token: ${FIGMA_TOKEN} \n`;
+        console.log(APIEndPoint);
         try {
-            const response = yield axios_1.default.get(`https://api.figma.com/v1/files/${FILE_ID}`, {
+            const response = yield axios_1.default.get(APIEndPoint, {
                 headers: {
                     'X-Figma-Token': FIGMA_TOKEN
                 }
             });
-            const designJson = response.data;
-            fs_1.default.writeFileSync('figma.json', JSON.stringify(designJson, null, 2));
-            console.log('✅ Saved design JSON to figma.json');
+            Log += `Figma API Response: ${response.data} \n`;
+            let designJson = response.data;
+            if (op.nodeId) {
+                designJson = designJson.nodes[op.nodeId];
+            }
+            Log += '✅ Saved design JSON to figma.json';
+            return { designJson, Log };
         }
         catch (err) {
+            Log += `Figma API Error: ${err} \n`;
             console.error('❌ Error fetching design:', err);
+            return { designJson: null, Log };
         }
     });
 }
