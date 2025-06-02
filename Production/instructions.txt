@@ -2,140 +2,50 @@ You are a frontend developer. Based on the following UI structure (extracted fro
 This code will be further edited by developers, so clarity, logical structure, and readability are extremely important.
       
 !!! IMPORTANT INSTRUCTIONS !!!
+!!! STRICTLY FOLLOW ALL OF THESE !!!
+
 0.The Figma Provieded is approved by our Design Team. No extra content should be added on your own. ONLY USE WHATEVER IS AVAILABLE IN FIGMA.
 1.Identify the brand color of website. This could be the most repeated color other than white in most cases.
 2.Use createTheme from Blade to create a custom theme here. save this Theme as theme.ts
 3.Import theme.ts for curstom theme in our website. DO NOT PROCEED WITHOUT A THEME !!
 4.Blade components generated website are very uniform in nature. I.E same set of colors and styles are repead in most of the places. TRY TO FOLLOW THIS !!
-5.Below is a list of some commonly used blade components. Read it to understand every component properly. 
-6.Use the blad-mcp to get better context of each component.
+5.Use the blad-mcp to get better context of each component.
+6.If image is provided Use it as main source of context. Try to understand the hierarchy of components from image and create exact replica.
 
-### Blade Knowledgebase: Most Important Components
+### Common Errors (Makesure to prevent these): 
+[Blade: Card]: Only `CardHeader, CardBody, CardFooter` components are accepted in `Card` children
 
-Box:
-- constrains : Versatile layout primitive, supports responsive design, flexbox, styled-system patterns, no custom CSS needed, foundational for layouts
-- attributs : as, id, children, flex, flexDirection, flexWrap, flexBasis, flexGrow, flexShrink, display, alignItems, alignSelf, justifyContent, gap, margin, marginTop, marginRight, marginBottom, marginLeft, marginX, marginY, padding, paddingTop, paddingRight, paddingBottom, paddingLeft, paddingX, paddingY, width, height, minWidth, minHeight, maxWidth, maxHeight, backgroundColor, border, borderTop, borderRight, borderBottom, borderLeft, borderColor, borderRadius, borderStyle, borderWidth, position, top, right, bottom, left, zIndex, overflow, overflowX, overflowY, elevation, transform, transformOrigin, clipPath, onMouseOver, onMouseEnter, onMouseLeave, onScroll, onDragStart, onDragEnd, onDragEnter, onDragOver, onDragLeave, onDrop, testID, data-analytics-*
+### Common syntaxes (To Use if detected): 
 
-Card:
-- constrains : Only accepts  CardBody as children; 
-- attributs : children, backgroundColor, borderRadius, elevation, padding, width, height, minHeight, minWidth, maxWidth, isSelected, href, target, rel, accessibilityLabel, shouldScaleOnHover, onHover, onClick, as, testID, data-analytics-*, StyledPropsBlade, paddingBottom, marginBottom, showDivider, title, subtitle, prefix, suffix, visual, paddingTop
+- TopNavBrand + Breadcrumb
+<Box backgroundColor="surface.background.primary.intense" marginBottom="spacing.6">
+    <Box display="flex" alignItems="center" justifyContent="space-between" paddingY="spacing.5" paddingX="spacing.7">
+        <BrandLogo />
+        <Icon + Button + DropDowm>
+    </Box>
+    {/* Breadcrumb */} 
+</Box>
 
-TopNav:
-- constrains : Top navigation bar, always uses TabNav for multi-product navigation, responsive, integrates with SideNav, only TopNavBrand/TopNavContent/TopNavActions as children, TabNav only accepts TabNavItem as children
-- attributs : children, padding, paddingTop, paddingBottom, paddingLeft, paddingRight, paddingX, paddingY, backgroundColor, position, top, bottom, left, right, width, zIndex, testID, StyledPropsBlade, title, href, target, as, isActive, icon, trailing, accessibilityLabel, onMouseDown, onPointerDown, onKeyDown, onKeyUp, onClick
+- Breadcrumb
 
-SideNav:
-- constrains : Responsive side navigation, only SideNavBody/SideNavFooter as children, supports multi-level, collapsible, mobile, integrates with routing, only SideNavLink/SideNavSection/SideNavItem as children in body
-- attributs : children, isOpen, onDismiss, onVisibleLevelChange, banner, testID, StyledPropsBlade, title, description, titleSuffix, trailing, href, target, as, isActive, icon, tooltip, onClick, maxVisibleItems, defaultIsExpanded, onExpandChange, leading, backgroundColor
+<Box display="flex" alignItems="center" justifyContent="space-between" paddingY="spacing.5" paddingX="spacing.7">
+    <Breadcrumb color="white">
+        <BreadcrumbItem href="#">Home</BreadcrumbItem>
+        {// similarly list all }
+    </Breadcrumb>
+</Box>
 
-BottomNav:
-- constrains : Persistent mobile navigation, only BottomNavItem as children, positioned at bottom, optimized for touch, supports active state, icons, labels
-- attributs : children, zIndex, testID, data-analytics-*, title, icon, href, target, rel, as, isActive, onClick
+- Icon + Button + Dropdown :
 
-Breadcrumb:
-- constrains : Only BreadcrumbItem as children, shows navigation path, supports size/color, icon, current page, custom component
-- attributs : children, size, color, showLastSeparator, testID, data-analytics-*, href, icon, isCurrentPage, accessibilityLabel, onClick, as
-
-Button:
-- constrains : Interactive, supports variant/size/color, icon, loading/disabled/fullWidth, can be anchor, accessibility label for icon-only
-- attributs : children, variant, color, icon, iconPosition, size, isDisabled, isLoading, isFullWidth, accessibilityLabel, onClick, href, target, rel, type, ref, testID, data-analytics-*, StyledPropsBlade
-
-ButtonGroup:
-- constrains : Groups only Button children, consistent styling/spacing, variant/size/color
-- attributs : children, variant, size, color, testID, data-analytics-*, StyledPropsBlade
-
-IconButton:
-- constrains : Icon-only action, accessible label required, supports size/emphasis/disabled
-- attributs : icon, size, emphasis, isDisabled, accessibilityLabel, onClick, testID, data-analytics-*, StyledPropsBlade
-
-Dropdown:
-- constrains : Floating overlay, supports various triggers (button, link, input), controlled/uncontrolled, optimal overlay positioning, single/multiple selection, only Dropdown subcomponents as children
-- attributs : selectionType, children, isOpen, defaultIsOpen, onOpenChange, shouldCloseOnClickOutside, shouldCloseOnEscape, width, maxWidth, maxHeight, variant, size, isDisabled, icon, iconPosition, title, subtitle, leading, trailing, titleSuffix, onClearButtonClick, label, value, onChange, accessibilityLabel, testID, StyledPropsBlade
-
-Menu:
-- constrains : Action menu, not for selection, not responsive by default, trigger and overlay as children, only MenuItem/MenuHeader/MenuFooter/MenuOverlay as children in overlay
-- attributs : children, isOpen, onOpenChange, openInteraction, title, description, as, onClick, onFocus, href, target, leading, trailing, titleSuffix, isDisabled, color, zIndex, width, minWidth, maxWidth, subtitle, testID, data-analytics-*
-
-ActionList:
-- constrains : List of actionable items, only ActionListItem or ActionListSection as children, can be used in Dropdowns/BottomSheets/SelectInput, supports icons, badges, avatars, sections
-- attributs : children, isVirtualized, title, description, onClick, value, href, target, leading, trailing, titleSuffix, isDisabled, intent, isSelected, src, alt, testID, data-analytics-*
-
-TextInput:
-- constrains : Single-line text input, supports label, help/error/success text, prefix/suffix, validation, size, controlled/uncontrolled
-- attributs : label, name, value, defaultValue, onChange, onFocus, onBlur, placeholder, isDisabled, isRequired, labelPosition, necessityIndicator, helpText, errorText, successText, prefix, suffix, type, autoFocus, size, icon, testID, data-analytics-*
-
-TextArea:
-- constrains : Multi-line text input, supports label, help/error/success text, prefix/suffix, validation, size, controlled/uncontrolled
-- attributs : label, name, value, defaultValue, onChange, onFocus, onBlur, placeholder, isDisabled, isRequired, labelPosition, necessityIndicator, helpText, errorText, successText, prefix, suffix, autoFocus, size, rows, testID, data-analytics-*
-
-SelectInput:
-- constrains : Dropdown select, supports single/multiple, label, help/error/success text, prefix/suffix, validation, size, controlled/uncontrolled
-- attributs : label, name, value, defaultValue, onChange, onFocus, onBlur, placeholder, isDisabled, isRequired, labelPosition, necessityIndicator, helpText, errorText, successText, prefix, suffix, autoFocus, size, options, testID, data-analytics-*
-
-AutoComplete:
-- constrains : Enhanced dropdown trigger, must be used within Dropdown, pairs with ActionList, supports text input and filtering, single/multiple selection
-- attributs : label, accessibilityLabel, labelPosition, necessityIndicator, validationState, helpText, errorText, successText, name, isDisabled, isRequired, prefix, suffix, autoFocus, onInputChange, onClick, onFocus, onBlur, placeholder, testID, size, icon, value, inputValue, defaultValue, defaultInputValue, onChange, shouldKeepInputValueOnSelect, shouldOpenOnFocus, filter, formatValue, maxRows, data-analytics-*
-
-DatePicker:
-- constrains : Single/range, supports presets, min/max/exclude date, validation, help/error/success text, locale, picker view
-- attributs : selectionType, onChange, isOpen, defaultIsOpen, onOpenChange, presets, minDate, maxDate, excludeDate, picker, defaultPicker, onPickerChange, firstDayOfWeek, allowSingleDateInRange, locale, onNext, onNextDecade, onNextMonth, onNextYear, onPrevious, onPreviousDecade, onPreviousMonth, onPreviousYear, onMonthSelect, onYearSelect, value, defaultValue, label, accessibilityLabel, size, isDisabled, isRequired, autoFocus, labelPosition, necessityIndicator, helpText, errorText, successText, testID, StyledPropsBlade
-
-PasswordInput:
-- constrains : Password field, supports label, help/error/success text, prefix/suffix, validation, size, controlled/uncontrolled, show/hide toggle
-- attributs : label, name, value, defaultValue, onChange, onFocus, onBlur, placeholder, isDisabled, isRequired, labelPosition, necessityIndicator, helpText, errorText, successText, prefix, suffix, autoFocus, size, testID, data-analytics-*
-
-PhoneNumberInput:
-- constrains : Phone number field, supports country code, label, help/error/success text, validation, size, controlled/uncontrolled
-- attributs : label, name, value, defaultValue, onChange, onFocus, onBlur, placeholder, isDisabled, isRequired, labelPosition, necessityIndicator, helpText, errorText, successText, autoFocus, size, countryCode, testID, data-analytics-*
-
-Checkbox:
-- constrains : Single or group, supports checked/unchecked/indeterminate, help/error text, size, validation, group label/necessity
-- attributs : children, defaultChecked, errorText, helpText, isChecked, isDisabled, isIndeterminate, isRequired, name, onChange, size, validationState, value, testID, StyledPropsBlade, defaultValue, label, labelPosition, necessityIndicator, value, onChange
-
-Radio:
-- constrains : Single or group, supports checked/unchecked, help/error text, size, validation, group label/necessity
-- attributs : children, value, name, checked, defaultChecked, onChange, isDisabled, isRequired, label, labelPosition, necessityIndicator, helpText, errorText, size, testID, data-analytics-*
-
-Switch:
-- constrains : Toggle input, supports label, help/error text, size, validation, controlled/uncontrolled
-- attributs : label, name, checked, defaultChecked, onChange, isDisabled, isRequired, labelPosition, necessityIndicator, helpText, errorText, size, testID, data-analytics-*
-
-Modal:
-- constrains : Overlay dialog, supports header/body/footer, controlled/uncontrolled, dismissible, focus trap, scrollable
-- attributs : isOpen, onDismiss, children, header, footer, size, isDismissible, isScrollable, testID, data-analytics-*
-
-Drawer:
-- constrains : Overlay panel, slides from right, supports header/body, stacking, controlled/uncontrolled, dismissible, focus trap
-- attributs : isOpen, onDismiss, onUnmount, showOverlay, children, zIndex, accessibilityLabel, initialFocusRef, isLazy, testID, data-analytics-*, title, subtitle, leading, titleSuffix, trailing, color, children
-
-Toast:
-- constrains : Temporary feedback, auto-dismiss, supports title/description/action, color/emphasis, position
-- attributs : title, description, action, color, emphasis, isDismissible, onDismiss, position, duration, testID, data-analytics-*
-
-Tooltip:
-- constrains : Hover/focus/click trigger, shows contextual info, supports placement, controlled/uncontrolled
-- attributs : children, content, placement, isOpen, defaultIsOpen, onOpenChange, trigger, testID, data-analytics-*
-
-Tag:
-- constrains : Small label, color-coded, removable, supports icon, size, emphasis
-- attributs : children, color, size, icon, isRemovable, onRemove, emphasis, testID, data-analytics-*
-
-Badge:
-- constrains : Small metadata, color-coded, status/category, size/emphasis/icon
-- attributs : children, color, emphasis, size, icon, testID, StyledPropsBlade, data-analytics-*
-
-ProgressBar:
-- constrains : Visual progress indicator, supports label, color, size, indeterminate
-- attributs : value, max, label, color, size, isIndeterminate, testID, data-analytics-*
-
-StepGroup:
-- constrains : Stepper, supports vertical/horizontal, controlled/uncontrolled, custom marker, label, status
-- attributs : children, orientation, size, currentStep, onStepChange, marker, label, status, testID, data-analytics-*
-
-Tabs:
-- constrains : Tabbed navigation, supports controlled/uncontrolled, vertical/horizontal, custom tab, disabled
-- attributs : children, value, defaultValue, onChange, orientation, size, isDisabled, testID, data-analytics-*
-
-Table:
-- constrains : Data table, supports header/body/footer, sorting, pagination, selection, custom cell
-- attributs : data, columns, children, header, footer, isSortable, isSelectable, onSort, onSelect, page, pageSize, onPageChange, testID, data-analytics-* 
+<Box display="flex" alignItems="center" gap="spacing.5">
+    <Button variant="primary" color="white" size="medium" icon={CreditCardIcon}/>
+    <Dropdown
+        children={[
+        <DropdownButton variant="tertiary" color="white" size="medium" key="trigger" icon={ChevronDownIcon} iconPosition="right">....-2031</DropdownButton>,
+        <DropdownOverlay key="overlay">
+            <ActionListItem title="My Orders" value="My Orders" onClick={() => { /* handle logout */ }} />
+            <ActionListItem title="Log out" value="logout" onClick={() => { /* handle logout */ }} />
+                </DropdownOverlay>
+            ]}
+        />
+</Box> 

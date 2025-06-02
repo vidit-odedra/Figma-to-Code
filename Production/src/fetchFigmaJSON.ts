@@ -1,5 +1,6 @@
 import axios from 'axios';
 import dotenv from "dotenv";
+import fs from 'fs';
 dotenv.config();
 
 const FIGMA_TOKEN = process.env.FIGMA_TOKEN;
@@ -18,8 +19,9 @@ async function fetchFigmaDesign(op:{fileID: string, nodeId?: string}, Log: strin
       if(op.nodeId){
         designJson = designJson.nodes[op.nodeId];
       }
-      
-      Log += '✅ Saved design JSON to figma.json';
+      // Write the design JSON to Production/Outputs/figma.json
+      fs.writeFileSync(`${process.env.cwd}Outputs/figma.json`, JSON.stringify(designJson, null, 2), 'utf-8');
+      Log += '✅ Saved design JSON to Production/Outputs/figma.json';
       return {designJson, Log};
     } 
     catch (err) {

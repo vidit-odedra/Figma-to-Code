@@ -14,6 +14,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const axios_1 = __importDefault(require("axios"));
 const dotenv_1 = __importDefault(require("dotenv"));
+const fs_1 = __importDefault(require("fs"));
 dotenv_1.default.config();
 const FIGMA_TOKEN = process.env.FIGMA_TOKEN;
 function fetchFigmaDesign(op, Log) {
@@ -31,7 +32,9 @@ function fetchFigmaDesign(op, Log) {
             if (op.nodeId) {
                 designJson = designJson.nodes[op.nodeId];
             }
-            Log += '✅ Saved design JSON to figma.json';
+            // Write the design JSON to Production/Outputs/figma.json
+            fs_1.default.writeFileSync(`${process.env.cwd}Outputs/figma.json`, JSON.stringify(designJson, null, 2), 'utf-8');
+            Log += '✅ Saved design JSON to Production/Outputs/figma.json';
             return { designJson, Log };
         }
         catch (err) {
