@@ -16,7 +16,8 @@ function styleToStr(style : nodeStyle | undefined) {
     
   return parts.length ? ` (${parts.join(', ')})` : '';
 }
-
+const imageMapPath = `${process.env.cwd}Outputs/image-map.json`;
+let imageMap: Record<string, string> = {};
 function nodeToPrompt(node:simpleNodeInterface, indent = 0) {
     if(!node) return "";
     const pad = '  '.repeat(indent);
@@ -40,11 +41,19 @@ function nodeToPrompt(node:simpleNodeInterface, indent = 0) {
         const childrenText = node.children.map(child => nodeToPrompt(child, indent + 1)).join('\n');
         line += `\n${childrenText}`;
     }
+    if (node.id && imageMap[node.id]){
+        line += ` image: ${imageMap[node.id]}`;
+    }
     return line;
 }
 
 export default function generatePrompt(parsedFigmaJson: simpleNodeInterface[]){
-    
+    try {
+        const imageMapData = fs.readFileSync(imageMapPath, 'utf-8');
+        imageMap = JSON.parse(imageMapData);
+    }
+    catch(err){
+     }
     // Compose final prompt text
     const promptHeader:string = fs.readFileSync(`${process.env.cwd}PromptHeader.txt`, 'utf-8');
     const promptBody:string = parsedFigmaJson
@@ -56,6 +65,6 @@ export default function generatePrompt(parsedFigmaJson: simpleNodeInterface[]){
       .join('\n');                    // Rejoin into a single string
     
     const finalPrompt = promptHeader + CleanPrompt;
-
+    fs.writeFileSync(`${process.env.cwd}Outputs/figma_prompt.txt`, finalPrompt);
     return finalPrompt;
 }

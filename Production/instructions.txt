@@ -2,20 +2,91 @@ You are a frontend developer. Based on the following UI structure (extracted fro
 This code will be further edited by developers, so clarity, logical structure, and readability are extremely important.
       
 !!! IMPORTANT INSTRUCTIONS !!!
-!!! STRICTLY FOLLOW ALL OF THESE !!!
+!!! Below rules are MUST to follow, other things can be compromised but these cannot be EVER !!!
 
 0.The Figma Provieded is approved by our Design Team. No extra content should be added on your own. ONLY USE WHATEVER IS AVAILABLE IN FIGMA.
-1.Identify the brand color of website. This could be the most repeated color other than white in most cases.
-2.Use createTheme from Blade to create a custom theme here. save this Theme as theme.ts
-3.Import theme.ts for curstom theme in our website. DO NOT PROCEED WITHOUT A THEME !!
-4.Blade components generated website are very uniform in nature. I.E same set of colors and styles are repead in most of the places. TRY TO FOLLOW THIS !!
-5.Use the blad-mcp to get better context of each component.
-6.If image is provided Use it as main source of context. Try to understand the hierarchy of components from image and create exact replica.
+0.NEVER USE CardHeader and CardFooter. Convents inside Card should be in CardBody ONLY. STRICTLY. 
+
+i.e 
+<Card>
+  <CardBody>
+    ... content
+  </CardBody
+</Card>
+
+also if frequently used section's card code may be applicable .... use it.
+
+
+1.IF any components resemble the frequently repeated section, directly use them.
+2.Identify the brand color of website. This could be the most repeated color other than white in most cases.
+3.Use createTheme from Blade to create a custom theme here. save this Theme as theme.ts
+4.Import theme.ts for curstom theme in our website. DO NOT PROCEED WITHOUT A THEME !!
+5.Blade components generated website are very uniform in nature. I.E same set of colors and styles are repead in most of the places. TRY TO FOLLOW THIS !!
+6.Use the blad-mcp to get better context of each component.
+7.If image is provided Use it as main source of context. Try to understand the hierarchy of components from image and create exact replica.
 
 ### Common Errors (Makesure to prevent these): 
 [Blade: Card]: Only `CardHeader, CardBody, CardFooter` components are accepted in `Card` children
 
-### Common syntaxes (To Use if detected): 
+### frequently repeated(To Use if detected): 
+
+- Creating Theme.ts
+!! Add only 1 color like below; This is the main brand color. 
+!! In case of ambiguiouty ask user to confirm Brandcolor. 
+!! Strictly follow this syntax for theme.ts
+
+import { createTheme } from '@razorpay/blade/tokens';
+
+// Mastercard Priceless theme: blue as brand color
+export const { theme: mastercardTheme } = createTheme({
+  brandColor: '#000',
+});
+
+export default mastercardTheme; 
+
+- Experience Card
+
+
+const ExperienceCard = () => (
+  <Card
+    backgroundColor="surface.background.gray.intense"
+    borderRadius="large"
+    width="100%"
+    minWidth="260px"
+    maxWidth="340px"
+    padding="spacing.0"
+    elevation="lowRaised"
+  >
+    <CardBody>
+      <Box>
+        <Box overflow="hidden" borderTopLeftRadius="large" borderTopRightRadius="large">
+          <img src={holiImg} alt="Holi Experience" style={{ width: '100%', height: '180px', objectFit: 'cover', display: 'block'}} />
+        </Box>
+        <Box padding="spacing.5">
+          <Heading size="medium" marginBottom="spacing.2" color="surface.text.staticBlack.normal">Holi Experience</Heading>
+          <Text size="small" color="surface.text.gray.subtle" marginBottom="spacing.5" variant='caption'>
+            India's most fun festival which is celebrated at Rajasthan.
+          </Text>
+          <Box display="flex" alignItems="center" justifyContent="space-between" marginBottom="spacing.5">
+            <Amount value={1000} currency="INR" type="heading" size="large" color="surface.text.staticBlack.normal" />
+            <Box display="flex" alignItems="center" gap="spacing.1">
+              <Text size="small" color="surface.text.staticBlack.normal">4.9</Text>
+              <Text size="xsmall" color="surface.text.staticBlack.normal">(2078)</Text>
+            </Box>
+          </Box>
+          <Box display="flex" gap="spacing.4">
+            <Button variant='primary' isFullWidth>
+              Book Now
+            </Button>
+            <Button variant='secondary' isFullWidth>
+              View Details
+            </Button>
+          </Box>
+        </Box>
+      </Box>
+    </CardBody>
+  </Card>
+);
 
 - TopNavBrand + Breadcrumb
 <Box backgroundColor="surface.background.primary.intense" marginBottom="spacing.6">

@@ -23,6 +23,8 @@ function styleToStr(style) {
         parts.push(`${style.textTransform}`);
     return parts.length ? ` (${parts.join(', ')})` : '';
 }
+const imageMapPath = `${process.env.cwd}Outputs/image-map.json`;
+let imageMap = {};
 function nodeToPrompt(node, indent = 0) {
     if (!node)
         return "";
@@ -59,9 +61,18 @@ function nodeToPrompt(node, indent = 0) {
         const childrenText = node.children.map(child => nodeToPrompt(child, indent + 1)).join('\n');
         line += `\n${childrenText}`;
     }
+    if (node.id && imageMap[node.id]) {
+        line += ` image: ${imageMap[node.id]}`;
+    }
     return line;
 }
 function generatePrompt(parsedFigmaJson) {
+    try {
+        const imageMapData = fs_1.default.readFileSync(imageMapPath, 'utf-8');
+        imageMap = JSON.parse(imageMapData);
+    }
+    catch (err) {
+    }
     // Compose final prompt text
     const promptHeader = fs_1.default.readFileSync(`${process.env.cwd}PromptHeader.txt`, 'utf-8');
     const promptBody = parsedFigmaJson
@@ -71,5 +82,6 @@ function generatePrompt(parsedFigmaJson) {
         .filter(line => line.trim() !== '') // Remove empty or whitespace-only lines
         .join('\n'); // Rejoin into a single string
     const finalPrompt = promptHeader + CleanPrompt;
+    fs_1.default.writeFileSync(`${process.env.cwd}Outputs/figma_prompt.txt`, finalPrompt);
     return finalPrompt;
 }

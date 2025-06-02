@@ -8,7 +8,11 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
+const fs_1 = __importDefault(require("fs"));
 function rgbaToHex(color) {
     // Helper to convert a float 0-1 to 2-digit hex
     function toHex(value) {
@@ -20,8 +24,10 @@ function rgbaToHex(color) {
     const bHex = toHex(color.b);
     return `#${rHex}${gHex}${bHex}`;
 }
+let imageMap = {};
 function simplifyNode(node) {
     const simpleNode = {
+        id: node.id,
         type: node.type,
         name: node.name || undefined
     };
@@ -60,7 +66,10 @@ function simplifyNode(node) {
         if (node.fills[0].opacity) {
             simpleNode.opacity = node.fills[0].opacity.toFixed(2);
         }
-        if (node.fills[0].color) {
+        if (node.fills[0].type == "IMAGE" && node.id && imageMap[node.id]) {
+            simpleNode.imageUrl = imageMap[node.id];
+        }
+        else if (node.fills[0].color) {
             const val = {
                 r: node.fills[0].color.r,
                 g: node.fills[0].color.g,
@@ -92,8 +101,17 @@ function simplifyNode(node) {
 function parseFigmaJson(figmaData, Log) {
     return __awaiter(this, void 0, void 0, function* () {
         try {
+            const imageMapPath = `${process.env.cwd}Outputs/image-map.json`;
             if (!figmaData.document || !Array.isArray(figmaData.document.children)) {
                 throw new Error("Invalid Figma JSON structure: 'document.children' is missing or not an array");
+            }
+            try {
+                const imageMapData = fs_1.default.readFileSync(imageMapPath, 'utf-8');
+                imageMap = JSON.parse(imageMapData);
+                Log += `✅ Image map read successfully from ${imageMapPath}\n`;
+            }
+            catch (err) {
+                Log += `⚠️ Warning: image-map.json not found at ${imageMapPath}. Continuing without image URLs.`;
             }
             Log += "Figma JSON read successfully\n";
             const simplifiedTree = figmaData.document.children

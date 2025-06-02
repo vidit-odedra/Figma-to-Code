@@ -16,6 +16,7 @@ export interface nodeStyle{
 }
 
 export interface simpleNodeInterface {
+    id : string,
     type    :string,
     name    :string | undefined, 
     text?   :string,
@@ -32,9 +33,11 @@ export interface simpleNodeInterface {
     opacity?        :string,
     border?         :string,
     borderColor?    :string,
+    imageUrl?       :string,
 }
 
 export interface node {
+    id : string,
     type : string,
     name : string | undefined,
     characters? : string,
@@ -54,7 +57,8 @@ export interface node {
     },
     fills? :[{
             color: color,
-            opacity: number
+            opacity: number,
+            type?: "SOLID" | "IMAGE",
         }],
     effects :[{
         type : string,

@@ -22,7 +22,32 @@ async function fetchFigmaDesign(op:{fileID: string, nodeId?: string}, Log: strin
       // Write the design JSON to Production/Outputs/figma.json
       fs.writeFileSync(`${process.env.cwd}Outputs/figma.json`, JSON.stringify(designJson, null, 2), 'utf-8');
       Log += '✅ Saved design JSON to Production/Outputs/figma.json';
-      return {designJson, Log};
+      
+      const imageNodes: string[] = [];
+
+      const findImageNodes = (node: any) => {
+        if (node.fills && node.fills.some((f: any) => f.type === "IMAGE")) {
+          imageNodes.push(node.id);
+        }
+        if (node.children) {
+          node.children.forEach(findImageNodes);
+        }
+      }
+
+      const rootNode = designJson.document || designJson;
+      findImageNodes(rootNode); 
+      Log += 'Found image nodes:' + imageNodes.length + '\n';
+
+      if (imageNodes.length > 0) {
+        const imageResponse = await axios.get(
+          `https://api.figma.com/v1/images/${op.fileID}?ids=${imageNodes.join(',')}`,
+            { headers: { 'X-Figma-Token': FIGMA_TOKEN } }
+        );
+
+        fs.writeFileSync(`${process.env.cwd}Outputs/image-map.json`, JSON.stringify(imageResponse.data.images, null, 2));
+        Log += '✅ Saved image map to Production/Outputs/image-map.json';
+      }
+    return {designJson, Log};
     } 
     catch (err) {
       Log += `Figma API Error: ${err} \n`;

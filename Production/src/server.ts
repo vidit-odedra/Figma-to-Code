@@ -10,7 +10,7 @@ const server = new McpServer({
   version: "1.0.0"
 });
 
-server.tool("Instructions-to-follow-for-Figma-to-Code","This tool is used to get the instructions to follow for the Figma to Code conversion. USE THIS TOOL FIRST TO GUIDE YOU.", async (input) => {
+server.tool("Instructions-for-Figma-to-Code","This tool is used to get the instructions to follow for the Figma to Code conversion. USE THIS TOOL FIRST TO GUIDE YOU.", async (input) => {
     return {
         content: [{
             type: "text",

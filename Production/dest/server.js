@@ -22,7 +22,7 @@ const server = new mcp_js_1.McpServer({
     name: "Demo",
     version: "1.0.0"
 });
-server.tool("Instructions-to-follow-for-Figma-to-Code", "This tool is used to get the instructions to follow for the Figma to Code conversion. USE THIS TOOL FIRST TO GUIDE YOU.", (input) => __awaiter(void 0, void 0, void 0, function* () {
+server.tool("Instructions-for-Figma-to-Code", "This tool is used to get the instructions to follow for the Figma to Code conversion. USE THIS TOOL FIRST TO GUIDE YOU.", (input) => __awaiter(void 0, void 0, void 0, function* () {
     return {
         content: [{
                 type: "text",

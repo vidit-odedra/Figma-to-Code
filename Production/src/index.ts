@@ -51,11 +51,11 @@ export async function AGENT(link : string) {
     
     if(simplifiedTree == null) return "No input File ID before generating prompt";
     const prompt = generatePrompt(simplifiedTree);
-    
+    Log += "Prompt Generated\n";
     return prompt;
 }
 
-//AGENT("https://www.figma.com/design/SjZwyV6LfeI7UKv89EgBpc/Mastercard-priceless?node-id=199-10320&t=QnDmmd2Rxo9Lw346-0");
+AGENT("https://www.figma.com/design/SjZwyV6LfeI7UKv89EgBpc/Mastercard-priceless?node-id=170-8084&t=wDqIVn5eLuG7aaWO-0");
 
 // Only run AGENT directly if this file is being run directly
 // https://www.figma.com/design/vjBZhj24aN7yzzR5eaZJiZ/EastWest-Bank?node-id=1-403&t=M6tuIlIdxaoxLfTI-4
