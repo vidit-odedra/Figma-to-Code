@@ -92,7 +92,6 @@ function simplifyNode(node) {
 function parseFigmaJson(figmaData, Log) {
     return __awaiter(this, void 0, void 0, function* () {
         try {
-            // const figmaData = JSON.parse(fs.readFileSync('./Outputs/figma.json', 'utf-8'));
             if (!figmaData.document || !Array.isArray(figmaData.document.children)) {
                 throw new Error("Invalid Figma JSON structure: 'document.children' is missing or not an array");
             }

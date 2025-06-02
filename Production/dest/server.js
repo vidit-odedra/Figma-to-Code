@@ -8,17 +8,29 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 const mcp_js_1 = require("@modelcontextprotocol/sdk/server/mcp.js");
 const stdio_js_1 = require("@modelcontextprotocol/sdk/server/stdio.js");
 const zod_1 = require("zod");
 const index_1 = require("./index");
+const fs_1 = __importDefault(require("fs"));
 // Create an MCP server
 const server = new mcp_js_1.McpServer({
     name: "Demo",
     version: "1.0.0"
 });
-server.tool("generate", { figmaUrl: zod_1.z.string().describe("Figma design URL") }, (input) => __awaiter(void 0, void 0, void 0, function* () {
+server.tool("Instructions-to-follow-for-Figma-to-Code", "This tool is used to get the instructions to follow for the Figma to Code conversion. USE THIS TOOL FIRST TO GUIDE YOU.", (input) => __awaiter(void 0, void 0, void 0, function* () {
+    return {
+        content: [{
+                type: "text",
+                text: fs_1.default.readFileSync(`${process.env.cwd}instructions.txt`, 'utf-8'),
+            }]
+    };
+}));
+server.tool("Convert-figma-to-text", "This tool is used to convert a Figma design to a text description of the design. USE The instructions tool first to guide you.", { figmaUrl: zod_1.z.string().describe("Figma design URL") }, (input) => __awaiter(void 0, void 0, void 0, function* () {
     try {
         if (!input) {
             return {

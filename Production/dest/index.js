@@ -56,10 +56,8 @@ function AGENT(link) {
         Log += Log3;
         if (simplifiedTree == null)
             return Log;
-        console.log("Figma Design Parsed", simplifiedTree);
         if (simplifiedTree == null)
             return "No input File ID before generating prompt";
-        console.log("Generating Prompt");
         const prompt = (0, generatePrompt_1.default)(simplifiedTree);
         return prompt;
     });

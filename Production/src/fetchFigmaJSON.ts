@@ -7,7 +7,6 @@ const FIGMA_TOKEN = process.env.FIGMA_TOKEN;
 async function fetchFigmaDesign(op:{fileID: string, nodeId?: string}, Log: string) {
     const APIEndPoint = (op.nodeId) ? `https://api.figma.com/v1/files/${op.fileID}/nodes?ids=${op.nodeId}` : `https://api.figma.com/v1/files/${op.fileID}`;
     Log += `Figma API Endpoint: ${APIEndPoint} \n`;
-    console.log(APIEndPoint);
     try {
       const response = await axios.get(APIEndPoint, {
         headers: {

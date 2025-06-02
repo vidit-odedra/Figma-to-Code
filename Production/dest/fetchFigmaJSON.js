@@ -15,14 +15,11 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const axios_1 = __importDefault(require("axios"));
 const dotenv_1 = __importDefault(require("dotenv"));
 dotenv_1.default.config();
-// ✅ REPLACE THESE
 const FIGMA_TOKEN = process.env.FIGMA_TOKEN;
-const DEFAULT_FILE_ID = 'wLMZ3Fsx8whJVOwVHOrPsw'; // from https://www.figma.com/file/<FILE_ID>/...
 function fetchFigmaDesign(op, Log) {
     return __awaiter(this, void 0, void 0, function* () {
         const APIEndPoint = (op.nodeId) ? `https://api.figma.com/v1/files/${op.fileID}/nodes?ids=${op.nodeId}` : `https://api.figma.com/v1/files/${op.fileID}`;
-        Log += `Figma API Endpoint: ${APIEndPoint} with token: ${FIGMA_TOKEN} \n`;
-        console.log(APIEndPoint);
+        Log += `Figma API Endpoint: ${APIEndPoint} \n`;
         try {
             const response = yield axios_1.default.get(APIEndPoint, {
                 headers: {
@@ -39,7 +36,6 @@ function fetchFigmaDesign(op, Log) {
         }
         catch (err) {
             Log += `Figma API Error: ${err} \n`;
-            console.error('❌ Error fetching design:', err);
             return { designJson: null, Log };
         }
     });

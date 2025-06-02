@@ -3,14 +3,23 @@ import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 import { z } from "zod";
 import { AGENT } from './index';
-
+import fs from 'fs';
 // Create an MCP server
 const server = new McpServer({
   name: "Demo",
   version: "1.0.0"
 });
 
-server.tool("generate",{figmaUrl: z.string().describe("Figma design URL")}, async (input) => {
+server.tool("Instructions-to-follow-for-Figma-to-Code","This tool is used to get the instructions to follow for the Figma to Code conversion. USE THIS TOOL FIRST TO GUIDE YOU.", async (input) => {
+    return {
+        content: [{
+            type: "text",
+            text: fs.readFileSync(`${process.env.cwd}instructions.txt`, 'utf-8'),
+        }]
+    };
+});
+
+server.tool("Convert-figma-to-text","This tool is used to convert a Figma design to a text description of the design. USE The instructions tool first to guide you.",{figmaUrl: z.string().describe("Figma design URL")}, async (input) => {
     try {
         if (!input) {
             return {

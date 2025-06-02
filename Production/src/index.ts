@@ -49,9 +49,7 @@ export async function AGENT(link : string) {
     if(simplifiedTree == null) return Log;
     
     
-    console.log("Figma Design Parsed", simplifiedTree);
     if(simplifiedTree == null) return "No input File ID before generating prompt";
-    console.log("Generating Prompt");
     const prompt = generatePrompt(simplifiedTree);
     
     return prompt;

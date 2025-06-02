@@ -56,8 +56,6 @@ export default function generatePrompt(parsedFigmaJson: simpleNodeInterface[]){
       .join('\n');                    // Rejoin into a single string
     
     const finalPrompt = promptHeader + CleanPrompt;
-    
-    console.log('✅ Prompt text saved as figma_prompt.txt');
 
     return finalPrompt;
 }
