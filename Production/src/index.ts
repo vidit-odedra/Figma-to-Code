@@ -31,7 +31,7 @@ function generateFigmaApiEndpoint(figmaUrl: string): {fileID : string , nodeId?:
 }
 
 
-export async function AGENT(link : string) {
+export async function AGENT(link : string, primaryColor : string) {
     let Log = "";
     const op = generateFigmaApiEndpoint(link)
     Log += `Figma API Endpoint: ${op?.fileID} , Node ID: ${op?.nodeId} \n`;
@@ -44,7 +44,7 @@ export async function AGENT(link : string) {
     
     
     Log += "Design JSON Fetched\n";
-    const {simplifiedTree, Log:Log3} = await parseFigmaJson(designJson, Log);
+    const {simplifiedTree, Log:Log3} = await parseFigmaJson(designJson, Log, primaryColor);
     Log += Log3;
     if(simplifiedTree == null) return Log;
     
@@ -55,7 +55,7 @@ export async function AGENT(link : string) {
     return prompt;
 }
 
-AGENT("https://www.figma.com/design/SjZwyV6LfeI7UKv89EgBpc/Mastercard-priceless?node-id=170-8084&t=wDqIVn5eLuG7aaWO-0");
+ AGENT("https://www.figma.com/design/SjZwyV6LfeI7UKv89EgBpc/Mastercard-priceless?node-id=170-8060&t=7zCfE0gVto8EcHCV-0","#000000");
 
 // Only run AGENT directly if this file is being run directly
 // https://www.figma.com/design/vjBZhj24aN7yzzR5eaZJiZ/EastWest-Bank?node-id=1-403&t=M6tuIlIdxaoxLfTI-4

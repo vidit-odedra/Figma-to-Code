@@ -19,7 +19,16 @@ server.tool("Instructions-for-Figma-to-Code","This tool is used to get the instr
     };
 });
 
-server.tool("Convert-figma-to-text","This tool is used to convert a Figma design to a text description of the design. USE The instructions tool first to guide you.",{figmaUrl: z.string().describe("Figma design URL")}, async (input) => {
+server.tool("Build-Image-map","This tool is used to build the image-map.json file. USE THIS TOOL AFTER THE CONVERT-FIGMA-TO-TEXT TOOL.", () => {
+    return {
+        content: [{
+            type: "text",
+            text: `Create a file named {filename where you are writing the code}-image-map.json (For e.g. if App.tsx is where you are writing the code then the filename is App-image-map.json). The file should contain the image-map.json file. paste the below content as a json there \n ${fs.readFileSync(`${process.env.cwd}Outputs/image-map.json`, 'utf-8')}`
+        }]
+    };
+});
+
+server.tool("Convert-figma-to-text","This tool is used to convert a Figma design to a text description of the design. USE The instructions tool first to guide you.",{figmaUrl: z.string().describe("Figma design URL"), PrimaryColor: z.string().regex(/^#([A-Fa-f0-9]{6})$/).describe("Primary Color of the Figma design in hex format (e.g., #FFFFFF). If not specified in the prompt then read from theme.ts file")}, async (input) => {
     try {
         if (!input) {
             return {
@@ -33,7 +42,8 @@ server.tool("Convert-figma-to-text","This tool is used to convert a Figma design
             };
         }
         const figmaUrl = input.figmaUrl;
-        const result = await AGENT(figmaUrl);
+        const primaryColor = input.PrimaryColor;
+        const result = await AGENT(figmaUrl,primaryColor);
         return {
             content: [{
                 type: "text",

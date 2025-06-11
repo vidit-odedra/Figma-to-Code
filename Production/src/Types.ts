@@ -1,4 +1,3 @@
-
 export interface color{
     r : number,
     g : number,
@@ -34,6 +33,21 @@ export interface simpleNodeInterface {
     border?         :string,
     borderColor?    :string,
     imageUrl?       :string,
+    visible?        :boolean,
+    componentProperties? : {
+        [key: string]: string,
+    },
+    layout? : {
+        type: "flex" | "grid" | "absolute" | "unknown",
+        flexDirection?: "row" | "column",
+        justifyContent?: "flex-start" | "center" | "flex-end" | "space-between" | "space-around" | "space-evenly",
+        alignItems?: "flex-start" | "center" | "flex-end" | "stretch",
+        gridColumns?: number,
+        gridRows?: number,
+        gap?: string,
+        paddingX?: string,
+        paddingY?: string
+    }
 }
 
 export interface node {
@@ -72,5 +86,12 @@ export interface node {
     }[],
     strokeWeight: number,
     children : node[]
-
+    visible: boolean,
+    componentProperties? : {
+        [key: string]: {
+            value: any,
+            type: string,
+            boundVariables?: any
+        }
+    }
 }

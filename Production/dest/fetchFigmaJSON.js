@@ -52,6 +52,10 @@ function fetchFigmaDesign(op, Log) {
                 fs_1.default.writeFileSync(`${process.env.cwd}Outputs/image-map.json`, JSON.stringify(imageResponse.data.images, null, 2));
                 Log += '✅ Saved image map to Production/Outputs/image-map.json';
             }
+            else {
+                fs_1.default.writeFileSync(`${process.env.cwd}Outputs/image-map.json`, JSON.stringify({}, null, 2));
+                Log += '✅ No images found. Created empty image-map.json';
+            }
             return { designJson, Log };
         }
         catch (err) {

@@ -40,7 +40,7 @@ function generateFigmaApiEndpoint(figmaUrl) {
         return null;
     }
 }
-function AGENT(link) {
+function AGENT(link, primaryColor) {
     return __awaiter(this, void 0, void 0, function* () {
         let Log = "";
         const op = generateFigmaApiEndpoint(link);
@@ -52,7 +52,7 @@ function AGENT(link) {
         if (designJson == null)
             return Log;
         Log += "Design JSON Fetched\n";
-        const { simplifiedTree, Log: Log3 } = yield (0, parseFigmaJson_1.default)(designJson, Log);
+        const { simplifiedTree, Log: Log3 } = yield (0, parseFigmaJson_1.default)(designJson, Log, primaryColor);
         Log += Log3;
         if (simplifiedTree == null)
             return Log;
@@ -63,7 +63,7 @@ function AGENT(link) {
         return prompt;
     });
 }
-AGENT("https://www.figma.com/design/SjZwyV6LfeI7UKv89EgBpc/Mastercard-priceless?node-id=170-8084&t=wDqIVn5eLuG7aaWO-0");
+AGENT("https://www.figma.com/design/SjZwyV6LfeI7UKv89EgBpc/Mastercard-priceless?node-id=170-8060&t=7zCfE0gVto8EcHCV-0", "#000000");
 // Only run AGENT directly if this file is being run directly
 // https://www.figma.com/design/vjBZhj24aN7yzzR5eaZJiZ/EastWest-Bank?node-id=1-403&t=M6tuIlIdxaoxLfTI-4
 // https://www.figma.com/design/vjBZhj24aN7yzzR5eaZJiZ/EastWest-Bank?node-id=1-626&t=or8BYJSPHfMGb1ht-0
